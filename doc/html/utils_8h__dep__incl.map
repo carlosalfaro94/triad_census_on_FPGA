@@ -1,0 +1,12 @@
+<map id="headers/utils.h" name="headers/utils.h">
+<area shape="rect" id="node2" href="$defs_8h.html" title="This file contains the definitions of the structures that are used for the kernel code..." alt="" coords="267,80,375,107"/>
+<area shape="rect" id="node3" href="$edge_8h.html" title="This file contains the definitions of the functions needed to create and manage an edge of a graph..." alt="" coords="25,162,135,189"/>
+<area shape="rect" id="node9" href="$BF__header_8h.html" title="This file contains the definitions of the functions needed to execute the Brute Force kernels..." alt="" coords="160,162,307,189"/>
+<area shape="rect" id="node10" href="$NDRange__BM__header_8h.html" title="This file contains the definitions of the functions needed to execute the NDRange BM kernels..." alt="" coords="331,155,488,196"/>
+<area shape="rect" id="node11" href="$single__BM__header_8h.html" title="This file contains the definitions of the functions needed to execute the single BM kernels..." alt="" coords="513,162,703,189"/>
+<area shape="rect" id="node4" href="$node_8h.html" title="This file contains the definitions of the functions &#160;needed to create and manage a node of a graph..." alt="" coords="25,244,135,271"/>
+<area shape="rect" id="node5" href="$graph_8h.html" title="This file contains the definitions of the functions needed to create and manage a graph..." alt="" coords="23,319,137,345"/>
+<area shape="rect" id="node6" href="$triads_8h_source.html" title="headers/triads.h" alt="" coords="23,393,137,420"/>
+<area shape="rect" id="node7" href="$aux_8h_source.html" title="headers/aux.h" alt="" coords="28,468,132,495"/>
+<area shape="rect" id="node8" href="$aux__opencl_8h_source.html" title="headers/aux_opencl.h" alt="" coords="5,543,155,569"/>
+</map>

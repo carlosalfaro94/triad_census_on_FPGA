@@ -1,0 +1,57 @@
+\hypertarget{BF__header_8h}{}\section{headers/\+B\+F\+\_\+header.h File Reference}
+\label{BF__header_8h}\index{headers/\+B\+F\+\_\+header.\+h@{headers/\+B\+F\+\_\+header.\+h}}
+
+
+This file contains the definitions of the functions needed to execute the Brute Force kernels.  
+
+
+{\ttfamily \#include \char`\"{}defs.\+h\char`\"{}}\newline
+Include dependency graph for B\+F\+\_\+header.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{BF__header_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{BF__header_8h_a69417949e991b0a7b1e8f2a1f13c4dc0}\label{BF__header_8h_a69417949e991b0a7b1e8f2a1f13c4dc0}} 
+short {\bfseries iso\+Tricode} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$u, \+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$v, \+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$w)
+\item 
+\mbox{\Hypertarget{BF__header_8h_a95e0a6a9cc2e8a80b278084f31f027a3}\label{BF__header_8h_a95e0a6a9cc2e8a80b278084f31f027a3}} 
+unsigned int {\bfseries get\+\_\+neighbor\+\_\+id} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} e)
+\item 
+\mbox{\Hypertarget{BF__header_8h_a3c6ec02b4ab708a4c4cc9d75d8b8bd3d}\label{BF__header_8h_a3c6ec02b4ab708a4c4cc9d75d8b8bd3d}} 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} {\bfseries get\+\_\+direction} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} e)
+\item 
+\mbox{\Hypertarget{BF__header_8h_a74cf1e49f7fc6430637462ee91af3336}\label{BF__header_8h_a74cf1e49f7fc6430637462ee91af3336}} 
+int {\bfseries linear\+\_\+search\+\_\+adj\+\_\+list} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$table, unsigned int key, unsigned int first, unsigned int last)
+\item 
+\mbox{\Hypertarget{BF__header_8h_a0de6df960ecbc500aeb43bb72bbe3d24}\label{BF__header_8h_a0de6df960ecbc500aeb43bb72bbe3d24}} 
+int {\bfseries binary\+\_\+search\+\_\+adj\+\_\+list} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$table, unsigned int key, int first, int last)
+\item 
+\mbox{\Hypertarget{BF__header_8h_a34370d41d892802b47e65a79f8a5bed5}\label{BF__header_8h_a34370d41d892802b47e65a79f8a5bed5}} 
+unsigned int {\bfseries get\+\_\+node\+\_\+id} (\+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$n)
+\item 
+\mbox{\Hypertarget{BF__header_8h_a8b554f428904c83d3b6e49e66482dcb5}\label{BF__header_8h_a8b554f428904c83d3b6e49e66482dcb5}} 
+int {\bfseries get\+\_\+neighbor\+\_\+pos} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$n, unsigned int nid)
+\item 
+\mbox{\Hypertarget{BF__header_8h_a32f3454ed00140c7181d15bb8619cf75}\label{BF__header_8h_a32f3454ed00140c7181d15bb8619cf75}} 
+\hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} {\bfseries not\+\_\+connected} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$u, \+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$v)
+\item 
+\mbox{\Hypertarget{BF__header_8h_a61a7d10a5e18fd084e19ffeb9e6ec1c7}\label{BF__header_8h_a61a7d10a5e18fd084e19ffeb9e6ec1c7}} 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} {\bfseries get\+\_\+dir\+\_\+between\+\_\+nodes} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$u, \+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the definitions of the functions needed to execute the Brute Force kernels. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 17-\/12-\/2017 
+\end{DoxyDate}

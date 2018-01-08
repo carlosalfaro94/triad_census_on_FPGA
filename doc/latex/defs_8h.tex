@@ -1,0 +1,58 @@
+\hypertarget{defs_8h}{}\section{headers/defs.h File Reference}
+\label{defs_8h}\index{headers/defs.\+h@{headers/defs.\+h}}
+
+
+This file contains the definitions of the structures that are used for the kernel code.  
+
+
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+Include dependency graph for defs.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{defs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{defs_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE}
+\begin{DoxyCompactList}\small\item\em This structure stores the information of a node within the graph. This structure is used in the kernel code and executed on the F\+P\+GA. \end{DoxyCompactList}\item 
+struct \hyperlink{structTASK}{T\+A\+SK}
+\begin{DoxyCompactList}\small\item\em This structure contains the information of a pair of nodes (u,v). Each pair of nodes is processed by a different kernel instance on a S\+I\+MD manner This structure is used in the kernel code and executed on the F\+P\+GA. \end{DoxyCompactList}\item 
+struct \hyperlink{structCENSUS}{C\+E\+N\+S\+US}
+\begin{DoxyCompactList}\small\item\em This structure contains a 16-\/position census array Each instance of an N\+D\+Range kernel has a different census array in which to write local results. This structure is used in the kernel code and executed on the F\+P\+GA. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{defs_8h_aadb1697eee3bb21dd6aa3af50b858d29}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the definitions of the structures that are used for the kernel code. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 13-\/12-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{defs_8h_aadb1697eee3bb21dd6aa3af50b858d29}\label{defs_8h_aadb1697eee3bb21dd6aa3af50b858d29}} 
+\index{defs.\+h@{defs.\+h}!E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE@{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE}}
+\index{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE@{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE}!defs.\+h@{defs.\+h}}
+\subsubsection{\texorpdfstring{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE}{EDGE\_DEVICE}}
+{\footnotesize\ttfamily typedef unsigned int \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE}}
+
+Stores the neighbor id and the direction of the edge 

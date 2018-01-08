@@ -1,0 +1,78 @@
+\hypertarget{single__BM__header_8h}{}\section{headers/single\+\_\+\+B\+M\+\_\+header.h File Reference}
+\label{single__BM__header_8h}\index{headers/single\+\_\+\+B\+M\+\_\+header.\+h@{headers/single\+\_\+\+B\+M\+\_\+header.\+h}}
+
+
+This file contains the definitions of the functions needed to execute the single BM kernels.  
+
+
+{\ttfamily \#include \char`\"{}defs.\+h\char`\"{}}\newline
+Include dependency graph for single\+\_\+\+B\+M\+\_\+header.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{single__BM__header_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a581c807c32dcbab09f5a73cd24757fc3}\label{single__BM__header_8h_a581c807c32dcbab09f5a73cd24757fc3}} 
+short {\bfseries iso\+Tricode} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$adj\+\_\+list\+\_\+u, \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$adj\+\_\+list\+\_\+v, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$u, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$v, uint w\+\_\+id)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a95f02d51d2e478d2203f203da34ca536}\label{single__BM__header_8h_a95f02d51d2e478d2203f203da34ca536}} 
+uint {\bfseries get\+\_\+neighbor\+\_\+id} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} e)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a3c6ec02b4ab708a4c4cc9d75d8b8bd3d}\label{single__BM__header_8h_a3c6ec02b4ab708a4c4cc9d75d8b8bd3d}} 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} {\bfseries get\+\_\+direction} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} e)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a1c79c56ad87266e0d11764d24f5983d1}\label{single__BM__header_8h_a1c79c56ad87266e0d11764d24f5983d1}} 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} {\bfseries turnup} (\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} dir)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_adfac5a560df38bc43d0300555971355f}\label{single__BM__header_8h_adfac5a560df38bc43d0300555971355f}} 
+int {\bfseries binary\+\_\+search\+\_\+adj\+\_\+list} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$table, uint key, int first, int last)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a92cb3b1f91aa073b09b7c1736c56b52a}\label{single__BM__header_8h_a92cb3b1f91aa073b09b7c1736c56b52a}} 
+int {\bfseries linear\+\_\+search\+\_\+adj\+\_\+list} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$table, uint key, uint first, uint last)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a950cef2eb92d33cc0eacbf81043cb8a2}\label{single__BM__header_8h_a950cef2eb92d33cc0eacbf81043cb8a2}} 
+uint {\bfseries get\+\_\+node\+\_\+id} (\+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$n)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a3ff637c927133d471e1ba8915cdb8bf2}\label{single__BM__header_8h_a3ff637c927133d471e1ba8915cdb8bf2}} 
+uint {\bfseries get\+\_\+first} (\+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$n)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_ade8df49106a5ef579bf793631c289dd6}\label{single__BM__header_8h_ade8df49106a5ef579bf793631c289dd6}} 
+uint {\bfseries get\+\_\+last} (\+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$n)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a5c89479856a4d5c3a30dcdf6f9111a0c}\label{single__BM__header_8h_a5c89479856a4d5c3a30dcdf6f9111a0c}} 
+\hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} {\bfseries copy\+\_\+node} (\+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$source)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a71a63036deafad558f1e97eab214b229}\label{single__BM__header_8h_a71a63036deafad558f1e97eab214b229}} 
+ushort {\bfseries copy\+\_\+edge\+\_\+list} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$local\+\_\+edges, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$node)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_aec484d28063ddf3360c29f3704e6badb}\label{single__BM__header_8h_aec484d28063ddf3360c29f3704e6badb}} 
+int {\bfseries get\+\_\+neighbor\+\_\+pos} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$n, uint nid)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a90b9a53d9eaa5596ea7ed1d15683c17a}\label{single__BM__header_8h_a90b9a53d9eaa5596ea7ed1d15683c17a}} 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} {\bfseries get\+\_\+dir\+\_\+between\+\_\+nodes} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$u, uint v\+\_\+id)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a55eff2ab3a319ac3693d954007aca947}\label{single__BM__header_8h_a55eff2ab3a319ac3693d954007aca947}} 
+uint {\bfseries get\+\_\+node\+\_\+pos} (\+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$node\+\_\+list, uint node\+\_\+id, uint num\+\_\+nodes)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a07f4573e769f536ee927d08b1377a0ae}\label{single__BM__header_8h_a07f4573e769f536ee927d08b1377a0ae}} 
+int {\bfseries binary\+\_\+search\+\_\+node\+\_\+list\+\_\+norec} (\+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$table, uint key, uint first, uint last)
+\item 
+\mbox{\Hypertarget{single__BM__header_8h_a725a5cacdac475b034827d44d37c76f0}\label{single__BM__header_8h_a725a5cacdac475b034827d44d37c76f0}} 
+int {\bfseries linear\+\_\+search\+\_\+node\+\_\+list} (\+\_\+\+\_\+constant \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$table, uint key, uint num\+\_\+nodes)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the definitions of the functions needed to execute the single BM kernels. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 17-\/12-\/2017 
+\end{DoxyDate}

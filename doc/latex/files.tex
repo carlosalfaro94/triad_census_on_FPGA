@@ -1,0 +1,28 @@
+\section{File List}
+Here is a list of all documented files with brief descriptions\+:\begin{DoxyCompactList}
+\item\contentsline{section}{headers/{\bfseries aux.\+h} }{\pageref{aux_8h}}{}
+\item\contentsline{section}{headers/{\bfseries aux\+\_\+opencl.\+h} }{\pageref{aux__opencl_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{BF__header_8h}{B\+F\+\_\+header.\+h} \\*This file contains the definitions of the functions needed to execute the Brute Force kernels }{\pageref{BF__header_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{defs_8h}{defs.\+h} \\*This file contains the definitions of the structures that are used for the kernel code }{\pageref{defs_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{edge_8h}{edge.\+h} \\*This file contains the definitions of the functions needed to create and manage an edge of a graph.  within project, we consider only directed graphs; edges must have a direction. ~\newline
+In our implementation, edge information is saved twice, since each of the nodes keeps its adjacency list (see \hyperlink{node_8h}{node.\+h}).~\newline
+ Each edge structure is therefore part of the node it belongs to, and contains the id of the other neigbhbor, and the direction.~\newline
+ The direction is coded using the 2 less significant bits of the uint32\+\_\+t used for storing the edge.~\newline
+ \textquotesingle{}01\textquotesingle{} means that the edge goes out from the node it belongs, \textquotesingle{}10\textquotesingle{} means edge goes in, and \textquotesingle{}11\textquotesingle{} conveys bidirectionality }{\pageref{edge_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{graph_8h}{graph.\+h} \\*This file contains the definitions of the functions needed to create and manage a graph. ~\newline
+In our implementation, the graph is read from a file which, in each of its lines, contains an edge of the graph in this format\+:~\newline
+ src\+\_\+node\+\_\+id tgt\+\_\+node\+\_\+id ~\newline
+In the structure, nodes can be ordered by ascending order of their ids }{\pageref{graph_8h}}{}
+\item\contentsline{section}{headers/{\bfseries helpers.\+h} }{\pageref{helpers_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{NDRange__BM__header_8h}{N\+D\+Range\+\_\+\+B\+M\+\_\+header.\+h} \\*This file contains the definitions of the functions needed to execute the N\+D\+Range BM kernels }{\pageref{NDRange__BM__header_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{node_8h}{node.\+h} \\*This file contains the definitions of the functions ~\newline
+needed to create and manage a node of a graph. ~\newline
+In our implementation, the graph is basically a list of nodes ~\newline
+which are identified uniquely with and unsigned integer. Each ~\newline
+node keeps track of its adjacency list, bi means of an array of ~\newline
+edges. Since each edge connects two nodes, edge information will ~\newline
+be duplicated }{\pageref{node_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{single__BM__header_8h}{single\+\_\+\+B\+M\+\_\+header.\+h} \\*This file contains the definitions of the functions needed to execute the single BM kernels }{\pageref{single__BM__header_8h}}{}
+\item\contentsline{section}{headers/{\bfseries triads.\+h} }{\pageref{triads_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{utils_8h}{utils.\+h} \\*This file contains the enumerations and macros needed for the whole project }{\pageref{utils_8h}}{}
+\end{DoxyCompactList}

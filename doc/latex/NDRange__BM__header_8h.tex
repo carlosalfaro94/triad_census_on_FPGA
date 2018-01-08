@@ -1,0 +1,54 @@
+\hypertarget{NDRange__BM__header_8h}{}\section{headers/\+N\+D\+Range\+\_\+\+B\+M\+\_\+header.h File Reference}
+\label{NDRange__BM__header_8h}\index{headers/\+N\+D\+Range\+\_\+\+B\+M\+\_\+header.\+h@{headers/\+N\+D\+Range\+\_\+\+B\+M\+\_\+header.\+h}}
+
+
+This file contains the definitions of the functions needed to execute the N\+D\+Range BM kernels.  
+
+
+{\ttfamily \#include \char`\"{}defs.\+h\char`\"{}}\newline
+Include dependency graph for N\+D\+Range\+\_\+\+B\+M\+\_\+header.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{NDRange__BM__header_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{NDRange__BM__header_8h_a697625370e04cd92861d106e9f2802d3}\label{NDRange__BM__header_8h_a697625370e04cd92861d106e9f2802d3}} 
+short {\bfseries iso\+Tricode} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$u, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$v, unsigned int w\+\_\+id)
+\item 
+\mbox{\Hypertarget{NDRange__BM__header_8h_a95f02d51d2e478d2203f203da34ca536}\label{NDRange__BM__header_8h_a95f02d51d2e478d2203f203da34ca536}} 
+uint {\bfseries get\+\_\+neighbor\+\_\+id} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} e)
+\item 
+\mbox{\Hypertarget{NDRange__BM__header_8h_a3c6ec02b4ab708a4c4cc9d75d8b8bd3d}\label{NDRange__BM__header_8h_a3c6ec02b4ab708a4c4cc9d75d8b8bd3d}} 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} {\bfseries get\+\_\+direction} (\hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} e)
+\item 
+\mbox{\Hypertarget{NDRange__BM__header_8h_a1c79c56ad87266e0d11764d24f5983d1}\label{NDRange__BM__header_8h_a1c79c56ad87266e0d11764d24f5983d1}} 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} {\bfseries turnup} (\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} dir)
+\item 
+\mbox{\Hypertarget{NDRange__BM__header_8h_a5486ebd7f130983e18b921595f7524ab}\label{NDRange__BM__header_8h_a5486ebd7f130983e18b921595f7524ab}} 
+int {\bfseries binary\+\_\+search\+\_\+adj\+\_\+list} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$table, uint key, int first, int last)
+\item 
+\mbox{\Hypertarget{NDRange__BM__header_8h_a6921fc49ace2c18b2c421c3700ae1d77}\label{NDRange__BM__header_8h_a6921fc49ace2c18b2c421c3700ae1d77}} 
+int {\bfseries linear\+\_\+search\+\_\+adj\+\_\+list} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$table, uint key, uint first, uint last)
+\item 
+\mbox{\Hypertarget{NDRange__BM__header_8h_a3fb99b454cbcec7b11562c474b968a78}\label{NDRange__BM__header_8h_a3fb99b454cbcec7b11562c474b968a78}} 
+int {\bfseries get\+\_\+neighbor\+\_\+pos} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$n, unsigned int nid)
+\item 
+\mbox{\Hypertarget{NDRange__BM__header_8h_a0fd0695a01348883dcb313032684b317}\label{NDRange__BM__header_8h_a0fd0695a01348883dcb313032684b317}} 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} {\bfseries get\+\_\+dir\+\_\+between\+\_\+nodes} (\+\_\+\+\_\+constant \hyperlink{structEDGE__DEVICE}{E\+D\+G\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$edges, \hyperlink{structNODE__DEVICE}{N\+O\+D\+E\+\_\+\+D\+E\+V\+I\+CE} $\ast$u, unsigned int v\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the definitions of the functions needed to execute the N\+D\+Range BM kernels. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 17-\/12-\/2017 
+\end{DoxyDate}

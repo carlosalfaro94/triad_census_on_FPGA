@@ -1,0 +1,1 @@
+Compiler Command: aoc -v -march=emulator kernels/tc_NDRange_BM_ord.cl -o emulations/NDRange_BM_ord/tc_NDRange_BM_ord.aocx -I headers/
