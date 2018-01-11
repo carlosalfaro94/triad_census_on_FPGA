@@ -87,39 +87,415 @@ Include dependency graph for BF_header.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a69417949e991b0a7b1e8f2a1f13c4dc0"><td class="memItemLeft" align="right" valign="top"><a id="a69417949e991b0a7b1e8f2a1f13c4dc0"></a>
-short&#160;</td><td class="memItemRight" valign="bottom"><b>isoTricode</b> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *edges, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *u, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *v, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *w)</td></tr>
+<tr class="memitem:a69417949e991b0a7b1e8f2a1f13c4dc0"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a69417949e991b0a7b1e8f2a1f13c4dc0">isoTricode</a> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *edges, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *u, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *v, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *w)</td></tr>
+<tr class="memdesc:a69417949e991b0a7b1e8f2a1f13c4dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that computes the triad type of a triple of nodes.  <a href="#a69417949e991b0a7b1e8f2a1f13c4dc0">More...</a><br /></td></tr>
 <tr class="separator:a69417949e991b0a7b1e8f2a1f13c4dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95e0a6a9cc2e8a80b278084f31f027a3"><td class="memItemLeft" align="right" valign="top"><a id="a95e0a6a9cc2e8a80b278084f31f027a3"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>get_neighbor_id</b> (<a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> e)</td></tr>
+<tr class="memitem:a95e0a6a9cc2e8a80b278084f31f027a3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a95e0a6a9cc2e8a80b278084f31f027a3">get_neighbor_id</a> (<a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> e)</td></tr>
+<tr class="memdesc:a95e0a6a9cc2e8a80b278084f31f027a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that returns the neighbor id of an edge.  <a href="#a95e0a6a9cc2e8a80b278084f31f027a3">More...</a><br /></td></tr>
 <tr class="separator:a95e0a6a9cc2e8a80b278084f31f027a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c6ec02b4ab708a4c4cc9d75d8b8bd3d"><td class="memItemLeft" align="right" valign="top"><a id="a3c6ec02b4ab708a4c4cc9d75d8b8bd3d"></a>
-<a class="el" href="utils_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_direction</b> (<a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> e)</td></tr>
+<tr class="memitem:a3c6ec02b4ab708a4c4cc9d75d8b8bd3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a3c6ec02b4ab708a4c4cc9d75d8b8bd3d">get_direction</a> (<a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> e)</td></tr>
+<tr class="memdesc:a3c6ec02b4ab708a4c4cc9d75d8b8bd3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that returns the direction of an edge.  <a href="#a3c6ec02b4ab708a4c4cc9d75d8b8bd3d">More...</a><br /></td></tr>
 <tr class="separator:a3c6ec02b4ab708a4c4cc9d75d8b8bd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74cf1e49f7fc6430637462ee91af3336"><td class="memItemLeft" align="right" valign="top"><a id="a74cf1e49f7fc6430637462ee91af3336"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>linear_search_adj_list</b> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *table, unsigned int key, unsigned int first, unsigned int last)</td></tr>
+<tr class="memitem:a74cf1e49f7fc6430637462ee91af3336"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a74cf1e49f7fc6430637462ee91af3336">linear_search_adj_list</a> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *table, unsigned int key, unsigned int first, unsigned int last)</td></tr>
+<tr class="memdesc:a74cf1e49f7fc6430637462ee91af3336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that performs linear search over an unordered array.  <a href="#a74cf1e49f7fc6430637462ee91af3336">More...</a><br /></td></tr>
 <tr class="separator:a74cf1e49f7fc6430637462ee91af3336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0de6df960ecbc500aeb43bb72bbe3d24"><td class="memItemLeft" align="right" valign="top"><a id="a0de6df960ecbc500aeb43bb72bbe3d24"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>binary_search_adj_list</b> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *table, unsigned int key, int first, int last)</td></tr>
+<tr class="memitem:a0de6df960ecbc500aeb43bb72bbe3d24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a0de6df960ecbc500aeb43bb72bbe3d24">binary_search_adj_list</a> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *table, unsigned int key, int first, int last)</td></tr>
+<tr class="memdesc:a0de6df960ecbc500aeb43bb72bbe3d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that performs binary search over an ordered array.  <a href="#a0de6df960ecbc500aeb43bb72bbe3d24">More...</a><br /></td></tr>
 <tr class="separator:a0de6df960ecbc500aeb43bb72bbe3d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34370d41d892802b47e65a79f8a5bed5"><td class="memItemLeft" align="right" valign="top"><a id="a34370d41d892802b47e65a79f8a5bed5"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>get_node_id</b> (__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *n)</td></tr>
+<tr class="memitem:a34370d41d892802b47e65a79f8a5bed5"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a34370d41d892802b47e65a79f8a5bed5">get_node_id</a> (__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *n)</td></tr>
+<tr class="memdesc:a34370d41d892802b47e65a79f8a5bed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that returns id of a certain node.  <a href="#a34370d41d892802b47e65a79f8a5bed5">More...</a><br /></td></tr>
 <tr class="separator:a34370d41d892802b47e65a79f8a5bed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b554f428904c83d3b6e49e66482dcb5"><td class="memItemLeft" align="right" valign="top"><a id="a8b554f428904c83d3b6e49e66482dcb5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>get_neighbor_pos</b> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *edges, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *n, unsigned int nid)</td></tr>
+<tr class="memitem:a8b554f428904c83d3b6e49e66482dcb5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a8b554f428904c83d3b6e49e66482dcb5">get_neighbor_pos</a> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *edges, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *n, unsigned int nid)</td></tr>
+<tr class="memdesc:a8b554f428904c83d3b6e49e66482dcb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that returns the position of a certain neighbor node within the edge array, given the first node and the neighbor id.  <a href="#a8b554f428904c83d3b6e49e66482dcb5">More...</a><br /></td></tr>
 <tr class="separator:a8b554f428904c83d3b6e49e66482dcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f3454ed00140c7181d15bb8619cf75"><td class="memItemLeft" align="right" valign="top"><a id="a32f3454ed00140c7181d15bb8619cf75"></a>
-<a class="el" href="utils_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><b>not_connected</b> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *edges, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *u, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *v)</td></tr>
+<tr class="memitem:a32f3454ed00140c7181d15bb8619cf75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a32f3454ed00140c7181d15bb8619cf75">not_connected</a> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *edges, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *u, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *v)</td></tr>
+<tr class="memdesc:a32f3454ed00140c7181d15bb8619cf75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that checks if two nodes u and v are connected.  <a href="#a32f3454ed00140c7181d15bb8619cf75">More...</a><br /></td></tr>
 <tr class="separator:a32f3454ed00140c7181d15bb8619cf75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61a7d10a5e18fd084e19ffeb9e6ec1c7"><td class="memItemLeft" align="right" valign="top"><a id="a61a7d10a5e18fd084e19ffeb9e6ec1c7"></a>
-<a class="el" href="utils_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_dir_between_nodes</b> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *edges, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *u, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *v)</td></tr>
+<tr class="memitem:a61a7d10a5e18fd084e19ffeb9e6ec1c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="utils_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BF__header_8h.html#a61a7d10a5e18fd084e19ffeb9e6ec1c7">get_dir_between_nodes</a> (__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *edges, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *u, __constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *v)</td></tr>
+<tr class="memdesc:a61a7d10a5e18fd084e19ffeb9e6ec1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that returns the direction of the edge present between two nodes (u,v)  <a href="#a61a7d10a5e18fd084e19ffeb9e6ec1c7">More...</a><br /></td></tr>
 <tr class="separator:a61a7d10a5e18fd084e19ffeb9e6ec1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains the definitions of the functions needed to execute the Brute Force kernels. </p>
 <dl class="section author"><dt>Author</dt><dd>: Carlos Alfaro</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>: 17-12-2017 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a0de6df960ecbc500aeb43bb72bbe3d24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de6df960ecbc500aeb43bb72bbe3d24">&#9670;&nbsp;</a></span>binary_search_adj_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int binary_search_adj_list </td>
+          <td>(</td>
+          <td class="paramtype">__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that performs binary search over an ordered array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__constant</td><td>EDGE_DEVICE* table: The array in which to perform the search </td></tr>
+    <tr><td class="paramname">uint</td><td>key: The key to search within the array </td></tr>
+    <tr><td class="paramname">int</td><td>first: the first index of the table </td></tr>
+    <tr><td class="paramname">int</td><td>last: the last index of the table</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int the position in which the key is stored, if it is found<br />
+ -1 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a61a7d10a5e18fd084e19ffeb9e6ec1c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61a7d10a5e18fd084e19ffeb9e6ec1c7">&#9670;&nbsp;</a></span>get_dir_between_nodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="utils_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a> get_dir_between_nodes </td>
+          <td>(</td>
+          <td class="paramtype">__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that returns the direction of the edge present between two nodes (u,v) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__constant</td><td>EDGE_DEVICE* edges: Global edge array </td></tr>
+    <tr><td class="paramname">__constant</td><td>NODE_DEVICE* u: The first node </td></tr>
+    <tr><td class="paramname">__constant</td><td>NODE_DEVICE* v: The second node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>DIRECTION: The direction of the edge between the nodes </dd></dl>
+
+</div>
+</div>
+<a id="a3c6ec02b4ab708a4c4cc9d75d8b8bd3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6ec02b4ab708a4c4cc9d75d8b8bd3d">&#9670;&nbsp;</a></span>get_direction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="utils_8h.html#aa268a41a13430b18e933ed40207178d0">DIRECTION</a> get_direction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that returns the direction of an edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structEDGE__DEVICE.html" title="This structure stores the information of a certain edge of the graph. This structure is used in the k...">EDGE_DEVICE</a></td><td>e: The edge</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>DIRECTION: The direction of the edge </dd></dl>
+
+</div>
+</div>
+<a id="a95e0a6a9cc2e8a80b278084f31f027a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e0a6a9cc2e8a80b278084f31f027a3">&#9670;&nbsp;</a></span>get_neighbor_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_neighbor_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that returns the neighbor id of an edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structEDGE__DEVICE.html" title="This structure stores the information of a certain edge of the graph. This structure is used in the k...">EDGE_DEVICE</a></td><td>e: The edge</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint: The neighbor id </dd></dl>
+
+</div>
+</div>
+<a id="a8b554f428904c83d3b6e49e66482dcb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b554f428904c83d3b6e49e66482dcb5">&#9670;&nbsp;</a></span>get_neighbor_pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_neighbor_pos </td>
+          <td>(</td>
+          <td class="paramtype">__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>nid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that returns the position of a certain neighbor node within the edge array, given the first node and the neighbor id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__constant</td><td>EDGE_DEVICE* edges: Edge array in which to search </td></tr>
+    <tr><td class="paramname">__constant</td><td>NODE_DEVICE* n: The node of which we want to get the neighbor position </td></tr>
+    <tr><td class="paramname">uint</td><td>nid: The node id of the neighbor we want to search</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int: The position within the edge array </dd></dl>
+
+</div>
+</div>
+<a id="a34370d41d892802b47e65a79f8a5bed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34370d41d892802b47e65a79f8a5bed5">&#9670;&nbsp;</a></span>get_node_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_node_id </td>
+          <td>(</td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that returns id of a certain node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NODE*</td><td>n: The node of which we want to discover the id</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint: the node id </dd></dl>
+
+</div>
+</div>
+<a id="a69417949e991b0a7b1e8f2a1f13c4dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69417949e991b0a7b1e8f2a1f13c4dc0">&#9670;&nbsp;</a></span>isoTricode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short isoTricode </td>
+          <td>(</td>
+          <td class="paramtype">__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that computes the triad type of a triple of nodes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__constant</td><td>EDGE_DEVICE* edges: Global edge array </td></tr>
+    <tr><td class="paramname">__constant</td><td>NODE_DEVICE* u: First node of the triple </td></tr>
+    <tr><td class="paramname">__constant</td><td>NODE_DEVICE* v: Second node of the triple </td></tr>
+    <tr><td class="paramname">_constant</td><td>NODE_DEVICE* w: Third node of the triple</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int: A number between 0 and 15, depending on the configuration of the triple </dd></dl>
+
+</div>
+</div>
+<a id="a74cf1e49f7fc6430637462ee91af3336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74cf1e49f7fc6430637462ee91af3336">&#9670;&nbsp;</a></span>linear_search_adj_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int linear_search_adj_list </td>
+          <td>(</td>
+          <td class="paramtype">__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>table</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>last</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that performs linear search over an unordered array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__constant</td><td>EDGE_DEVICE* table: The array in which to perform the search </td></tr>
+    <tr><td class="paramname">uint</td><td>key: The key to search within the array </td></tr>
+    <tr><td class="paramname">uint</td><td>first: the first index of the table </td></tr>
+    <tr><td class="paramname">uint</td><td>last: the last index of the table</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int the position in which the key is stored, if it is found<br />
+ -1 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a32f3454ed00140c7181d15bb8619cf75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f3454ed00140c7181d15bb8619cf75">&#9670;&nbsp;</a></span>not_connected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="utils_8h.html#a3e5b8192e7d9ffaf3542f1210aec18dd">BOOL</a> not_connected </td>
+          <td>(</td>
+          <td class="paramtype">__constant <a class="el" href="structEDGE__DEVICE.html">EDGE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__constant <a class="el" href="structNODE__DEVICE.html">NODE_DEVICE</a> *&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that checks if two nodes u and v are connected. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">__constant</td><td>EDGE_DEVICE* edges: The global edge array </td></tr>
+    <tr><td class="paramname">__constant</td><td>NODE_DEVICE* u: The first node </td></tr>
+    <tr><td class="paramname">__constant</td><td>NODE_DEVICE* v: The second node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BOOL TRUE if the nodes u and v are not connected.<br />
+ FALSE if u and v are connected. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

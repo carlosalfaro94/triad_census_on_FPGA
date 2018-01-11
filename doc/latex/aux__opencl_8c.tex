@@ -1,0 +1,203 @@
+\hypertarget{aux__opencl_8c}{}\section{sources/aux\+\_\+opencl.c File Reference}
+\label{aux__opencl_8c}\index{sources/aux\+\_\+opencl.\+c@{sources/aux\+\_\+opencl.\+c}}
+
+
+This file contains the code that implements the functions defined in the header file \hyperlink{aux__opencl_8h}{aux\+\_\+opencl.\+h}. Please refer to it to check the documentation.  
+
+
+{\ttfamily \#include \char`\"{}../headers/aux\+\_\+opencl.\+h\char`\"{}}\newline
+Include dependency graph for aux\+\_\+opencl.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aux__opencl_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{aux__opencl_8c_ae9b40ed1990a1e4162a6b6c4fe8419a5}{setup} (cl\+\_\+platform\+\_\+id $\ast$platform, cl\+\_\+device\+\_\+id $\ast$device, cl\+\_\+context $\ast$context)
+\begin{DoxyCompactList}\small\item\em Function sets up the proper Open\+CL environment for creating and executing kernels.~\newline
+This process involves selecting an Open\+CL platform and an attached device, as well as creating an execution context. \end{DoxyCompactList}\item 
+cl\+\_\+program \hyperlink{aux__opencl_8c_a335b0aeeb63d503ee152a3adc84ab19e}{create\+\_\+build\+\_\+program} (char $\ast$filename, cl\+\_\+context context, cl\+\_\+device\+\_\+id $\ast$device)
+\begin{DoxyCompactList}\small\item\em Function creates and builds the program from a binary .aocx file~\newline
+This process involves selecting an Open\+CL platform and an attached device, as well as creating an execution context. \end{DoxyCompactList}\item 
+void \hyperlink{aux__opencl_8c_a8e2f457f73112edd95ab085f5de0d4bd}{display\+\_\+platform\+\_\+info} (cl\+\_\+platform\+\_\+id platform)
+\begin{DoxyCompactList}\small\item\em Function displays information about the Open\+CL platform. \end{DoxyCompactList}\item 
+void \hyperlink{aux__opencl_8c_ab9ec1cbdd471182d6d645cb348ddcfa0}{display\+\_\+device\+\_\+info} (cl\+\_\+device\+\_\+id device)
+\begin{DoxyCompactList}\small\item\em Function displays information about the Open\+CL device used. \end{DoxyCompactList}\item 
+void \hyperlink{aux__opencl_8c_a2e23d888af16d40462205572135139a4}{check\+\_\+error} (cl\+\_\+int error\+\_\+code, const char $\ast$message)
+\begin{DoxyCompactList}\small\item\em Function checks the error code returned by a A\+PI function. If there has been~\newline
+an error, displays the errror code and stops execution. \end{DoxyCompactList}\item 
+cl\+\_\+mem \hyperlink{aux__opencl_8c_a611ba60155d74de941fd81b533d28c1a}{create\+\_\+and\+\_\+write\+\_\+buffer} (cl\+\_\+context context, cl\+\_\+command\+\_\+queue queue, size\+\_\+t size, void $\ast$host\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em Function that creates an Open\+CL buffer object and fills it with certain information. \end{DoxyCompactList}\item 
+void \hyperlink{aux__opencl_8c_afefd6c0004b4a7972a5f55cb8f386211}{set\+\_\+args} (cl\+\_\+kernel kernel, void $\ast$arg0, void $\ast$arg1, void $\ast$arg2, void $\ast$arg3)
+\begin{DoxyCompactList}\small\item\em Function that sets the four argument of an Open\+CL kernel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the code that implements the functions defined in the header file \hyperlink{aux__opencl_8h}{aux\+\_\+opencl.\+h}. Please refer to it to check the documentation. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 18-\/12-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{aux__opencl_8c_a2e23d888af16d40462205572135139a4}\label{aux__opencl_8c_a2e23d888af16d40462205572135139a4}} 
+\index{aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}!check\+\_\+error@{check\+\_\+error}}
+\index{check\+\_\+error@{check\+\_\+error}!aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}}
+\subsubsection{\texorpdfstring{check\+\_\+error()}{check\_error()}}
+{\footnotesize\ttfamily void check\+\_\+error (\begin{DoxyParamCaption}\item[{cl\+\_\+int}]{error\+\_\+code,  }\item[{const char $\ast$}]{message }\end{DoxyParamCaption})}
+
+
+
+Function checks the error code returned by a A\+PI function. If there has been~\newline
+an error, displays the errror code and stops execution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl\+\_\+int} & error\+\_\+code\+: error code returned by the function \\
+\hline
+{\em const} & char$\ast$ message\+: Message to be printed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux__opencl_8c_a611ba60155d74de941fd81b533d28c1a}\label{aux__opencl_8c_a611ba60155d74de941fd81b533d28c1a}} 
+\index{aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}!create\+\_\+and\+\_\+write\+\_\+buffer@{create\+\_\+and\+\_\+write\+\_\+buffer}}
+\index{create\+\_\+and\+\_\+write\+\_\+buffer@{create\+\_\+and\+\_\+write\+\_\+buffer}!aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}}
+\subsubsection{\texorpdfstring{create\+\_\+and\+\_\+write\+\_\+buffer()}{create\_and\_write\_buffer()}}
+{\footnotesize\ttfamily cl\+\_\+mem create\+\_\+and\+\_\+write\+\_\+buffer (\begin{DoxyParamCaption}\item[{cl\+\_\+context}]{context,  }\item[{cl\+\_\+command\+\_\+queue}]{queue,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{host\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Function that creates an Open\+CL buffer object and fills it with certain information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl\+\_\+context} & context\+: Open\+CL context \\
+\hline
+{\em cl\+\_\+command\+\_\+queue} & queue\+: Open\+CL queue for the communication between host and Open\+CL device \\
+\hline
+{\em size\+\_\+t} & size\+: Size in bytes of the buffer \\
+\hline
+{\em void$\ast$} & host\+\_\+ptr\+: Pointer to the data to be copied in the newly created buffer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cl\+\_\+mem The buffer created. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux__opencl_8c_a335b0aeeb63d503ee152a3adc84ab19e}\label{aux__opencl_8c_a335b0aeeb63d503ee152a3adc84ab19e}} 
+\index{aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}!create\+\_\+build\+\_\+program@{create\+\_\+build\+\_\+program}}
+\index{create\+\_\+build\+\_\+program@{create\+\_\+build\+\_\+program}!aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}}
+\subsubsection{\texorpdfstring{create\+\_\+build\+\_\+program()}{create\_build\_program()}}
+{\footnotesize\ttfamily cl\+\_\+program create\+\_\+build\+\_\+program (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{cl\+\_\+context}]{context,  }\item[{cl\+\_\+device\+\_\+id $\ast$}]{device }\end{DoxyParamCaption})}
+
+
+
+Function creates and builds the program from a binary .aocx file~\newline
+This process involves selecting an Open\+CL platform and an attached device, as well as creating an execution context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & $\ast$filename\+: Name of the .aocx file containing the binary H\+DL file \\
+\hline
+{\em cl\+\_\+context} & context\+: Open\+CL context \\
+\hline
+{\em cl\+\_\+device\+\_\+id$\ast$} & device\+: Pointer to the Open\+CL device id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux__opencl_8c_ab9ec1cbdd471182d6d645cb348ddcfa0}\label{aux__opencl_8c_ab9ec1cbdd471182d6d645cb348ddcfa0}} 
+\index{aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}!display\+\_\+device\+\_\+info@{display\+\_\+device\+\_\+info}}
+\index{display\+\_\+device\+\_\+info@{display\+\_\+device\+\_\+info}!aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}}
+\subsubsection{\texorpdfstring{display\+\_\+device\+\_\+info()}{display\_device\_info()}}
+{\footnotesize\ttfamily void display\+\_\+device\+\_\+info (\begin{DoxyParamCaption}\item[{cl\+\_\+device\+\_\+id}]{device }\end{DoxyParamCaption})}
+
+
+
+Function displays information about the Open\+CL device used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl\+\_\+device\+\_\+id} & device\+: Open\+CL device\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux__opencl_8c_a8e2f457f73112edd95ab085f5de0d4bd}\label{aux__opencl_8c_a8e2f457f73112edd95ab085f5de0d4bd}} 
+\index{aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}!display\+\_\+platform\+\_\+info@{display\+\_\+platform\+\_\+info}}
+\index{display\+\_\+platform\+\_\+info@{display\+\_\+platform\+\_\+info}!aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}}
+\subsubsection{\texorpdfstring{display\+\_\+platform\+\_\+info()}{display\_platform\_info()}}
+{\footnotesize\ttfamily void display\+\_\+platform\+\_\+info (\begin{DoxyParamCaption}\item[{cl\+\_\+platform\+\_\+id}]{platform }\end{DoxyParamCaption})}
+
+
+
+Function displays information about the Open\+CL platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl\+\_\+platform\+\_\+id} & platform\+: Open\+CL platform\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux__opencl_8c_afefd6c0004b4a7972a5f55cb8f386211}\label{aux__opencl_8c_afefd6c0004b4a7972a5f55cb8f386211}} 
+\index{aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}!set\+\_\+args@{set\+\_\+args}}
+\index{set\+\_\+args@{set\+\_\+args}!aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}}
+\subsubsection{\texorpdfstring{set\+\_\+args()}{set\_args()}}
+{\footnotesize\ttfamily void set\+\_\+args (\begin{DoxyParamCaption}\item[{cl\+\_\+kernel}]{kernel,  }\item[{void $\ast$}]{arg0,  }\item[{void $\ast$}]{arg1,  }\item[{void $\ast$}]{arg2,  }\item[{void $\ast$}]{arg3 }\end{DoxyParamCaption})}
+
+
+
+Function that sets the four argument of an Open\+CL kernel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl\+\_\+kernel} & kernel\+: The kernel we want to set the params to \\
+\hline
+{\em void$\ast$} & arg0\+: First argument \\
+\hline
+{\em void$\ast$} & arg1\+: Seconde argument \\
+\hline
+{\em void$\ast$} & arg2\+: Third argument \\
+\hline
+{\em void$\ast$} & arg3\+: Fourth argument\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux__opencl_8c_ae9b40ed1990a1e4162a6b6c4fe8419a5}\label{aux__opencl_8c_ae9b40ed1990a1e4162a6b6c4fe8419a5}} 
+\index{aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}!setup@{setup}}
+\index{setup@{setup}!aux\+\_\+opencl.\+c@{aux\+\_\+opencl.\+c}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}\item[{cl\+\_\+platform\+\_\+id $\ast$}]{platform,  }\item[{cl\+\_\+device\+\_\+id $\ast$}]{device,  }\item[{cl\+\_\+context $\ast$}]{context }\end{DoxyParamCaption})}
+
+
+
+Function sets up the proper Open\+CL environment for creating and executing kernels.~\newline
+This process involves selecting an Open\+CL platform and an attached device, as well as creating an execution context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl\+\_\+platform\+\_\+id$\ast$} & platform\+: Pointer to the Open\+CL platform (to be filled by the function) \\
+\hline
+{\em cl\+\_\+device\+\_\+id$\ast$} & device\+: Pointer to the Open\+CL device id (to be filled by the function) \\
+\hline
+{\em cl\+\_\+context$\ast$} & context\+: Pointer to the Open\+CL context (to be created by the function)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}

@@ -1,0 +1,17 @@
+<map id="headers/helpers.h" name="headers/helpers.h">
+<area shape="rect" id="node2" href="$node_8h.html" title="This file contains the definitions of the functions &#160;needed to create and manage a node of a graph..." alt="" coords="641,80,751,107"/>
+<area shape="rect" id="node16" href="$helpers_8c.html" title="This file contains the code that implements the functions defined in the header file helpers..." alt="" coords="776,80,901,107"/>
+<area shape="rect" id="node3" href="$graph_8h.html" title="This file contains the definitions of the functions needed to create and manage a graph..." alt="" coords="571,155,685,181"/>
+<area shape="rect" id="node15" href="$node_8c.html" title="This file contains the code that implements the functions defined in the header file node..." alt="" coords="710,155,821,181"/>
+<area shape="rect" id="node4" href="$triads_8h.html" title="This file contains the definitions of the functions needed to implement the secuential versions of th..." alt="" coords="501,229,616,256"/>
+<area shape="rect" id="node14" href="$graph_8c.html" title="This file contains the code that implements the functions defined in the header file graph..." alt="" coords="640,229,755,256"/>
+<area shape="rect" id="node5" href="$aux_8h.html" title="This file contains the definitions of some auxiliary functions &#160;used by the main program run the prog..." alt="" coords="440,304,544,331"/>
+<area shape="rect" id="node13" href="$triads_8c.html" title="This file contains the code that implements the functions defined in the header file triads..." alt="" coords="568,304,683,331"/>
+<area shape="rect" id="node6" href="$aux__opencl_8h.html" title="This file contains the definitions of the auxiliary functions &#160;used by the main program run the OpenC..." alt="" coords="184,379,333,405"/>
+<area shape="rect" id="node10" href="$aux_8c.html" title="This file contains the code that implements the functions defined in the header file aux..." alt="" coords="357,379,461,405"/>
+<area shape="rect" id="node11" href="$main__sequential_8c.html" title="This is the main program of the sequential application. It executes a user&#45;specified sequential versi..." alt="" coords="486,379,663,405"/>
+<area shape="rect" id="node12" href="$times__sequential_8c.html" title="This program collects execution performances of a user&#45;specified sequential version of the triad cens..." alt="" coords="688,379,869,405"/>
+<area shape="rect" id="node7" href="$aux__opencl_8c.html" title="This file contains the code that implements the functions defined in the header file aux_opencl..." alt="" coords="5,453,155,480"/>
+<area shape="rect" id="node8" href="$main__parallel_8c.html" title="This is the main program of the OpenCL application. It executes a user&#45;specified accelerated version ..." alt="" coords="179,453,338,480"/>
+<area shape="rect" id="node9" href="$times__parallel_8c.html" title="This program collects execution performances of a user&#45;specified accelerated version of the triad cen..." alt="" coords="363,453,525,480"/>
+</map>

@@ -1,5 +1,16 @@
 #include "../headers/helpers.h"
 
+/**
+  *   @file helpers.c
+  *
+  *   @brief This file contains the code that implements the functions defined in the 
+  *   header file helpers.h. Please refer to it to check the documentation.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 19-10-2017
+  **/
+
 int linear_search(void* table, int num_elems, size_t size, void* key, int (*comp) (const void* arg1, const void* arg2)){
     int i;
     for (i = 0;i<num_elems;i++){

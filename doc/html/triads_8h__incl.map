@@ -1,0 +1,8 @@
+<map id="headers/triads.h" name="headers/triads.h">
+<area shape="rect" id="node2" href="$graph_8h.html" title="This file contains the definitions of the functions needed to create and manage a graph..." alt="" coords="230,80,295,107"/>
+<area shape="rect" id="node3" href="$node_8h.html" title="This file contains the definitions of the functions &#160;needed to create and manage a node of a graph..." alt="" coords="232,155,293,181"/>
+<area shape="rect" id="node4" href="$edge_8h.html" title="This file contains the definitions of the functions needed to create and manage an edge of a graph..." alt="" coords="187,229,248,256"/>
+<area shape="rect" id="node10" href="$helpers_8h.html" title="This file contains the definitions of helper functions used used used to search and insert in arrays..." alt="" coords="272,229,347,256"/>
+<area shape="rect" id="node5" href="$defs_8h.html" title="This file contains the definitions of the structures that are used for the kernel code..." alt="" coords="5,304,64,331"/>
+<area shape="rect" id="node6" href="$utils_8h.html" title="This file contains the enumerations and macros needed for the whole project. " alt="" coords="6,379,63,405"/>
+</map>

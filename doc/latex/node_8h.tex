@@ -13,18 +13,20 @@ be duplicated.
 
 {\ttfamily \#include \char`\"{}edge.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}helpers.\+h\char`\"{}}\newline
-Include dependency graph for node.\+h\+:\nopagebreak
+Include dependency graph for node.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=336pt]{node_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=192pt]{node_8h__dep__incl}
+\includegraphics[width=350pt]{node_8h__dep__incl}
 \end{center}
 \end{figure}
 \subsection*{Data Structures}
@@ -40,7 +42,7 @@ struct \hyperlink{structNODE}{N\+O\+DE}
 \hyperlink{utils_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{node_8h_a67c0e1812fc9ef4b2f1f2760cfbc6ac5}{add\+\_\+edge\+\_\+to\+\_\+node} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n, uint32\+\_\+t neighbor\+\_\+id, \hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} dir)
 \begin{DoxyCompactList}\small\item\em Function that creates a new node, allocating memory for its fields and initializing them. The node\+\_\+id is set to the parameter passed, while the adj\+\_\+list is set to N\+U\+LL and the num\+\_\+neighbors is set to 0. \end{DoxyCompactList}\item 
 int \hyperlink{node_8h_a5b0769e751658fc3d9768c079ecba12c}{get\+\_\+neighbor\+\_\+pos} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n, uint32\+\_\+t neighbor\+\_\+id)
-\begin{DoxyCompactList}\small\item\em Function that returns the position of a certain noighbor node within the adjacency list of the node, given the neighbor id. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function that returns the position of a certain neighbor node within the adjacency list of the node, given the neighbor id. \end{DoxyCompactList}\item 
 uint32\+\_\+t \hyperlink{node_8h_aed1bcaeca3d8358924632d6cf06dd29e}{get\+\_\+node\+\_\+id} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n)
 \begin{DoxyCompactList}\small\item\em Function that returns id of a certain node. \end{DoxyCompactList}\item 
 \hyperlink{edge_8h_ab4a642fc78a44ca8df119570b3288e13}{E\+D\+GE} \hyperlink{node_8h_a1f56c95c3bf68181e75cef1e8a4ff2fc}{get\+\_\+edge} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n, int pos)
@@ -320,13 +322,13 @@ E\+D\+GE\+: the edge
 
 
 
-Function that returns the position of a certain noighbor node within the adjacency list of the node, given the neighbor id. 
+Function that returns the position of a certain neighbor node within the adjacency list of the node, given the neighbor id. 
 
 Getter functions 
 \begin{DoxyParams}{Parameters}
 {\em N\+O\+D\+E$\ast$} & n\+: The node of which we want to get the neighbor position \\
 \hline
-{\em uint32\+\_\+t} & neighbor\+\_\+id\+: The node id of the neighbor we want search\\
+{\em uint32\+\_\+t} & neighbor\+\_\+id\+: The node id of the neighbor we want to search\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

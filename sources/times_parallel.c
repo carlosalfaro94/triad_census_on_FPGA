@@ -1,7 +1,20 @@
-/*Main de pruebas*/
 #include "../headers/aux_opencl.h"
+
 #include <getopt.h>
 #include <sys/time.h>
+
+
+/**
+  *   @file times_parallel.c
+  *
+  *   @brief This program collects execution performances of a user-specified accelerated version of the triad census algorithm
+  *   and writes them to a file
+  *   
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 28-12-2017
+  **/
 
 
 void display_help(char *program);

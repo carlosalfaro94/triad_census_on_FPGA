@@ -1,0 +1,475 @@
+\hypertarget{node_8c}{}\section{sources/node.c File Reference}
+\label{node_8c}\index{sources/node.\+c@{sources/node.\+c}}
+
+
+This file contains the code that implements the functions defined in the header file \hyperlink{node_8h}{node.\+h}. Please refer to it to check the documentation.  
+
+
+{\ttfamily \#include \char`\"{}../headers/node.\+h\char`\"{}}\newline
+Include dependency graph for node.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{node_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structNODE}{N\+O\+DE} $\ast$ \hyperlink{node_8c_a44b280e18f7f2ff59e126501cb5da4cf}{create\+\_\+node} (uint32\+\_\+t node\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Function that creates a new node, allocating memory for its fields and initializing them. The node\+\_\+id is set to the parameter passed, while the adj\+\_\+list is set to N\+U\+LL and the num\+\_\+neighbors is set to 0. \end{DoxyCompactList}\item 
+\hyperlink{utils_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} \hyperlink{node_8c_aacd383eaed2cba7aced7b1e032783f34}{add\+\_\+edge\+\_\+to\+\_\+node} (\hyperlink{structNODE}{N\+O\+DE} $\ast$node, uint32\+\_\+t neighbor\+\_\+id, \hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} dir)
+\begin{DoxyCompactList}\small\item\em Function that creates a new node, allocating memory for its fields and initializing them. The node\+\_\+id is set to the parameter passed, while the adj\+\_\+list is set to N\+U\+LL and the num\+\_\+neighbors is set to 0. \end{DoxyCompactList}\item 
+int \hyperlink{node_8c_a5b0769e751658fc3d9768c079ecba12c}{get\+\_\+neighbor\+\_\+pos} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n, uint32\+\_\+t neighbor\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Function that returns the position of a certain neighbor node within the adjacency list of the node, given the neighbor id. \end{DoxyCompactList}\item 
+\hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{node_8c_a37de73278d193b74aed6a86833cb8c87}{not\+\_\+connected} (\hyperlink{structNODE}{N\+O\+DE} $\ast$u, \hyperlink{structNODE}{N\+O\+DE} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Function that checks if two nodes u and v are connected. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{node_8c_aed1bcaeca3d8358924632d6cf06dd29e}{get\+\_\+node\+\_\+id} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Function that returns id of a certain node. \end{DoxyCompactList}\item 
+\hyperlink{edge_8h_ab4a642fc78a44ca8df119570b3288e13}{E\+D\+GE} \hyperlink{node_8c_a1f56c95c3bf68181e75cef1e8a4ff2fc}{get\+\_\+edge} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n, int pos)
+\begin{DoxyCompactList}\small\item\em Function that the edge present in a certain position~\newline
+of the adjacency list of a node. \end{DoxyCompactList}\item 
+\hyperlink{edge_8h_ab4a642fc78a44ca8df119570b3288e13}{E\+D\+GE} $\ast$ \hyperlink{node_8c_a304e4f1cf8e0dbadd842ac4c8336c9f1}{get\+\_\+adj\+\_\+list} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Function that returns the adjacency list of a certain node. \end{DoxyCompactList}\item 
+int \hyperlink{node_8c_a02799b8fad8a4f676a9a6d5d0b82c366}{get\+\_\+num\+\_\+neighbors} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Function that returns the number of neighbors a certain node has. \end{DoxyCompactList}\item 
+int \hyperlink{node_8c_a6c59974e491a07d3c328570d42c3dbdb}{get\+\_\+degree} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Function that returns the degree of a certain node. \end{DoxyCompactList}\item 
+int \hyperlink{node_8c_aab41692fa3f3d5214a5dadb4f616a853}{comp\+\_\+nodes\+\_\+by\+\_\+id} (const void $\ast$key, const void $\ast$pnode)
+\begin{DoxyCompactList}\small\item\em Function that compares two nodes (useful for binary search and insertion sort).~\newline
+The comparison is made based on the node ids. \end{DoxyCompactList}\item 
+int \hyperlink{node_8c_ac2c976ce0d52406c4df50195371276b8}{comp\+\_\+nodes\+\_\+by\+\_\+degree} (const void $\ast$key, const void $\ast$pnode)
+\begin{DoxyCompactList}\small\item\em Function that compares two nodes (useful for binary search and insertion sort).~\newline
+The comparison is made based on the number of neighbors of each node. \end{DoxyCompactList}\item 
+int \hyperlink{node_8c_ab797719885a33013788cb2d4b248a36e}{comp\+\_\+ids} (const void $\ast$key, const void $\ast$pid)
+\begin{DoxyCompactList}\small\item\em Function that compares two ids (useful for binary search and insertion sort). \end{DoxyCompactList}\item 
+void \hyperlink{node_8c_abd4c035d081c773dff95d4f62a781ef6}{insert\+\_\+nodes} (void $\ast$nodes, void $\ast$node, int pos)
+\begin{DoxyCompactList}\small\item\em Function that inserts a node in a list for nodes ~\newline
+(useful for the helper function insert\+\_\+sort) \end{DoxyCompactList}\item 
+uint32\+\_\+t $\ast$ \hyperlink{node_8c_af2840bd87ae7f23b8f0416f47ddb67da}{union\+\_\+adj\+\_\+lists\+\_\+ordered} (int $\ast$card\+\_\+S, \hyperlink{structNODE}{N\+O\+DE} $\ast$u, \hyperlink{structNODE}{N\+O\+DE} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Function that constructs the ordered union of the adjacency lists of two nodes ~\newline
+ u and v, storing only the neighbor ids and avoiding the insertion of ~\newline
+ u and v (in case they were present in the lists).~\newline
+ The function also fills the parameter card\+\_\+S with the cardinality of the ~\newline
+ union. \end{DoxyCompactList}\item 
+uint32\+\_\+t $\ast$ \hyperlink{node_8c_a9bef0eea3e19f9545e070374f5abc055}{union\+\_\+adj\+\_\+lists\+\_\+not\+\_\+ordered} (int $\ast$card\+\_\+S, \hyperlink{structNODE}{N\+O\+DE} $\ast$u, \hyperlink{structNODE}{N\+O\+DE} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Function that constructs the not ordered union of the adjacency lists of two nodes ~\newline
+ u and v, storing only the neighbor ids and avoiding the insertion of ~\newline
+ u and v (in case they were present in the lists).~\newline
+ The function also fills the parameter card\+\_\+S with the cardinality of the~\newline
+ union. \end{DoxyCompactList}\item 
+\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} \hyperlink{node_8c_acfeda132522226efe0dcab8ff2813da3}{get\+\_\+dir\+\_\+between\+\_\+nodes} (\hyperlink{structNODE}{N\+O\+DE} $\ast$u, \hyperlink{structNODE}{N\+O\+DE} $\ast$v)
+\begin{DoxyCompactList}\small\item\em Function that constructs the union of the adjacency lists of two nodes~\newline
+ u and v, storing only the neighbor ids and avoiding the insertion of ~\newline
+ u and v (in case they were present in the lists).~\newline
+ The function also fills the parameter card\+\_\+S with the cardinality of the~\newline
+ union. \end{DoxyCompactList}\item 
+void \hyperlink{node_8c_ac537b7cd330634c71ec43a4ce258c3b1}{print\+\_\+node} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Function that prints the information of a node. \end{DoxyCompactList}\item 
+void \hyperlink{node_8c_a3f5e6b88f2394c03ffa21bd8e4bdb9c0}{destroy\+\_\+node} (\hyperlink{structNODE}{N\+O\+DE} $\ast$n)
+\begin{DoxyCompactList}\small\item\em Function that destroys a node, freeing the memory of ~\newline
+ its structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{node_8c_aa94b0ac5dc0f8919227cda71fe50db38}{ordered}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the code that implements the functions defined in the header file \hyperlink{node_8h}{node.\+h}. Please refer to it to check the documentation. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 23-\/10-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{node_8c_aacd383eaed2cba7aced7b1e032783f34}\label{node_8c_aacd383eaed2cba7aced7b1e032783f34}} 
+\index{node.\+c@{node.\+c}!add\+\_\+edge\+\_\+to\+\_\+node@{add\+\_\+edge\+\_\+to\+\_\+node}}
+\index{add\+\_\+edge\+\_\+to\+\_\+node@{add\+\_\+edge\+\_\+to\+\_\+node}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{add\+\_\+edge\+\_\+to\+\_\+node()}{add\_edge\_to\_node()}}
+{\footnotesize\ttfamily \hyperlink{utils_8h_a32c27cc471df37f4fc818d65de0a56c4}{S\+T\+A\+T\+US} add\+\_\+edge\+\_\+to\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n,  }\item[{uint32\+\_\+t}]{neighbor\+\_\+id,  }\item[{\hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON}}]{dir }\end{DoxyParamCaption})}
+
+
+
+Function that creates a new node, allocating memory for its fields and initializing them. The node\+\_\+id is set to the parameter passed, while the adj\+\_\+list is set to N\+U\+LL and the num\+\_\+neighbors is set to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: The node in which we want to insert the edge \\
+\hline
+{\em uint32\+\_\+t} & neighbor\+\_\+id\+: The node id of the neighbor we want to insert \\
+\hline
+{\em D\+I\+R\+E\+C\+T\+I\+ON} & dir\+: The direction of the edge we want to insert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+T\+A\+T\+US\+: OK if the insertion was successful E\+RR otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_ab797719885a33013788cb2d4b248a36e}\label{node_8c_ab797719885a33013788cb2d4b248a36e}} 
+\index{node.\+c@{node.\+c}!comp\+\_\+ids@{comp\+\_\+ids}}
+\index{comp\+\_\+ids@{comp\+\_\+ids}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{comp\+\_\+ids()}{comp\_ids()}}
+{\footnotesize\ttfamily int comp\+\_\+ids (\begin{DoxyParamCaption}\item[{const void $\ast$}]{key,  }\item[{const void $\ast$}]{pid }\end{DoxyParamCaption})}
+
+
+
+Function that compares two ids (useful for binary search and insertion sort). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & void$\ast$ key\+: The key we want to compare to the pointer. It is a pointer an id. \\
+\hline
+{\em const} & void$\ast$ pid\+: A pointer to the id we want to compare to the key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int A number that is less than, greater than or equal to 0, depending on weather the key is less than, greather than or equal to the id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_ac2c976ce0d52406c4df50195371276b8}\label{node_8c_ac2c976ce0d52406c4df50195371276b8}} 
+\index{node.\+c@{node.\+c}!comp\+\_\+nodes\+\_\+by\+\_\+degree@{comp\+\_\+nodes\+\_\+by\+\_\+degree}}
+\index{comp\+\_\+nodes\+\_\+by\+\_\+degree@{comp\+\_\+nodes\+\_\+by\+\_\+degree}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{comp\+\_\+nodes\+\_\+by\+\_\+degree()}{comp\_nodes\_by\_degree()}}
+{\footnotesize\ttfamily int comp\+\_\+nodes\+\_\+by\+\_\+degree (\begin{DoxyParamCaption}\item[{const void $\ast$}]{key,  }\item[{const void $\ast$}]{pnode }\end{DoxyParamCaption})}
+
+
+
+Function that compares two nodes (useful for binary search and insertion sort).~\newline
+The comparison is made based on the number of neighbors of each node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & void$\ast$ key\+: The key we want to compare to the other node. It is a pointer to the number of neighbors of a node. \\
+\hline
+{\em const} & void$\ast$ pnode\+: A pointer to the node we want to compare to the key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int A number that is less than, greater than or equal to 0, depending on weather the key is less than, greather than or equal to the pnode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_aab41692fa3f3d5214a5dadb4f616a853}\label{node_8c_aab41692fa3f3d5214a5dadb4f616a853}} 
+\index{node.\+c@{node.\+c}!comp\+\_\+nodes\+\_\+by\+\_\+id@{comp\+\_\+nodes\+\_\+by\+\_\+id}}
+\index{comp\+\_\+nodes\+\_\+by\+\_\+id@{comp\+\_\+nodes\+\_\+by\+\_\+id}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{comp\+\_\+nodes\+\_\+by\+\_\+id()}{comp\_nodes\_by\_id()}}
+{\footnotesize\ttfamily int comp\+\_\+nodes\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{const void $\ast$}]{key,  }\item[{const void $\ast$}]{pnode }\end{DoxyParamCaption})}
+
+
+
+Function that compares two nodes (useful for binary search and insertion sort).~\newline
+The comparison is made based on the node ids. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & void$\ast$ key\+: The key we want to compare to the other node. It is a pointer to a node id. \\
+\hline
+{\em const} & void$\ast$ pnode\+: A pointer to the node we want to compare to the key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int A number that is less than, greater than or equal to 0, depending on weather the key is less than, greather than or equal to the pnode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a44b280e18f7f2ff59e126501cb5da4cf}\label{node_8c_a44b280e18f7f2ff59e126501cb5da4cf}} 
+\index{node.\+c@{node.\+c}!create\+\_\+node@{create\+\_\+node}}
+\index{create\+\_\+node@{create\+\_\+node}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{create\+\_\+node()}{create\_node()}}
+{\footnotesize\ttfamily \hyperlink{structNODE}{N\+O\+DE}$\ast$ create\+\_\+node (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{node\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Function that creates a new node, allocating memory for its fields and initializing them. The node\+\_\+id is set to the parameter passed, while the adj\+\_\+list is set to N\+U\+LL and the num\+\_\+neighbors is set to 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & node\+\_\+id\+: The id of the node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+O\+D\+E$\ast$\+: A pointer to the node just created. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a3f5e6b88f2394c03ffa21bd8e4bdb9c0}\label{node_8c_a3f5e6b88f2394c03ffa21bd8e4bdb9c0}} 
+\index{node.\+c@{node.\+c}!destroy\+\_\+node@{destroy\+\_\+node}}
+\index{destroy\+\_\+node@{destroy\+\_\+node}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{destroy\+\_\+node()}{destroy\_node()}}
+{\footnotesize\ttfamily void destroy\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Function that destroys a node, freeing the memory of ~\newline
+ its structures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: the node to destroy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a304e4f1cf8e0dbadd842ac4c8336c9f1}\label{node_8c_a304e4f1cf8e0dbadd842ac4c8336c9f1}} 
+\index{node.\+c@{node.\+c}!get\+\_\+adj\+\_\+list@{get\+\_\+adj\+\_\+list}}
+\index{get\+\_\+adj\+\_\+list@{get\+\_\+adj\+\_\+list}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+adj\+\_\+list()}{get\_adj\_list()}}
+{\footnotesize\ttfamily \hyperlink{edge_8h_ab4a642fc78a44ca8df119570b3288e13}{E\+D\+GE}$\ast$ get\+\_\+adj\+\_\+list (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Function that returns the adjacency list of a certain node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: The node of which we want to get the adjacency list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+D\+G\+E$\ast$\+: The adjacency list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a6c59974e491a07d3c328570d42c3dbdb}\label{node_8c_a6c59974e491a07d3c328570d42c3dbdb}} 
+\index{node.\+c@{node.\+c}!get\+\_\+degree@{get\+\_\+degree}}
+\index{get\+\_\+degree@{get\+\_\+degree}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+degree()}{get\_degree()}}
+{\footnotesize\ttfamily int get\+\_\+degree (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Function that returns the degree of a certain node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: The node of which we want to discover the degree\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the degree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_acfeda132522226efe0dcab8ff2813da3}\label{node_8c_acfeda132522226efe0dcab8ff2813da3}} 
+\index{node.\+c@{node.\+c}!get\+\_\+dir\+\_\+between\+\_\+nodes@{get\+\_\+dir\+\_\+between\+\_\+nodes}}
+\index{get\+\_\+dir\+\_\+between\+\_\+nodes@{get\+\_\+dir\+\_\+between\+\_\+nodes}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+dir\+\_\+between\+\_\+nodes()}{get\_dir\_between\_nodes()}}
+{\footnotesize\ttfamily \hyperlink{utils_8h_aa268a41a13430b18e933ed40207178d0}{D\+I\+R\+E\+C\+T\+I\+ON} get\+\_\+dir\+\_\+between\+\_\+nodes (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{u,  }\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Function that constructs the union of the adjacency lists of two nodes~\newline
+ u and v, storing only the neighbor ids and avoiding the insertion of ~\newline
+ u and v (in case they were present in the lists).~\newline
+ The function also fills the parameter card\+\_\+S with the cardinality of the~\newline
+ union. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & u\+: The first node \\
+\hline
+{\em N\+O\+D\+E$\ast$} & v\+: The second node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+I\+R\+E\+C\+T\+I\+ON\+: The direction between the two nodes\+:~\newline
+ I\+N\+\_\+\+O\+UT, O\+U\+T\+\_\+\+IN, or B\+I\+D\+I\+R\+E\+C\+T\+I\+O\+N\+AL in case they are connected.~\newline
+ N\+O\+NE in case they are not connected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a1f56c95c3bf68181e75cef1e8a4ff2fc}\label{node_8c_a1f56c95c3bf68181e75cef1e8a4ff2fc}} 
+\index{node.\+c@{node.\+c}!get\+\_\+edge@{get\+\_\+edge}}
+\index{get\+\_\+edge@{get\+\_\+edge}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+edge()}{get\_edge()}}
+{\footnotesize\ttfamily \hyperlink{edge_8h_ab4a642fc78a44ca8df119570b3288e13}{E\+D\+GE} get\+\_\+edge (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Function that the edge present in a certain position~\newline
+of the adjacency list of a node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: The node from which we want to get the edge \\
+\hline
+{\em int} & pos\+: The position within the adjacency list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+D\+GE\+: the edge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a5b0769e751658fc3d9768c079ecba12c}\label{node_8c_a5b0769e751658fc3d9768c079ecba12c}} 
+\index{node.\+c@{node.\+c}!get\+\_\+neighbor\+\_\+pos@{get\+\_\+neighbor\+\_\+pos}}
+\index{get\+\_\+neighbor\+\_\+pos@{get\+\_\+neighbor\+\_\+pos}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+neighbor\+\_\+pos()}{get\_neighbor\_pos()}}
+{\footnotesize\ttfamily int get\+\_\+neighbor\+\_\+pos (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n,  }\item[{uint32\+\_\+t}]{neighbor\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Function that returns the position of a certain neighbor node within the adjacency list of the node, given the neighbor id. 
+
+Getter functions 
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: The node of which we want to get the neighbor position \\
+\hline
+{\em uint32\+\_\+t} & neighbor\+\_\+id\+: The node id of the neighbor we want to search\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: The position within the adjacency list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_aed1bcaeca3d8358924632d6cf06dd29e}\label{node_8c_aed1bcaeca3d8358924632d6cf06dd29e}} 
+\index{node.\+c@{node.\+c}!get\+\_\+node\+\_\+id@{get\+\_\+node\+\_\+id}}
+\index{get\+\_\+node\+\_\+id@{get\+\_\+node\+\_\+id}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+node\+\_\+id()}{get\_node\_id()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+node\+\_\+id (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Function that returns id of a certain node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: The node of which we want to discover the id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t\+: the node id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a02799b8fad8a4f676a9a6d5d0b82c366}\label{node_8c_a02799b8fad8a4f676a9a6d5d0b82c366}} 
+\index{node.\+c@{node.\+c}!get\+\_\+num\+\_\+neighbors@{get\+\_\+num\+\_\+neighbors}}
+\index{get\+\_\+num\+\_\+neighbors@{get\+\_\+num\+\_\+neighbors}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+num\+\_\+neighbors()}{get\_num\_neighbors()}}
+{\footnotesize\ttfamily int get\+\_\+num\+\_\+neighbors (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Function that returns the number of neighbors a certain node has. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: The node of which we want to discover the number of neighbors\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the number of neighbors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_abd4c035d081c773dff95d4f62a781ef6}\label{node_8c_abd4c035d081c773dff95d4f62a781ef6}} 
+\index{node.\+c@{node.\+c}!insert\+\_\+nodes@{insert\+\_\+nodes}}
+\index{insert\+\_\+nodes@{insert\+\_\+nodes}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{insert\+\_\+nodes()}{insert\_nodes()}}
+{\footnotesize\ttfamily void insert\+\_\+nodes (\begin{DoxyParamCaption}\item[{void $\ast$}]{nodes,  }\item[{void $\ast$}]{node,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Function that inserts a node in a list for nodes ~\newline
+(useful for the helper function insert\+\_\+sort) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & nodes\+: The list of nodes in which we want to insert the new node \\
+\hline
+{\em const} & void$\ast$ node\+: The node to insert \\
+\hline
+{\em int} & pos\+: The position in which to insert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a37de73278d193b74aed6a86833cb8c87}\label{node_8c_a37de73278d193b74aed6a86833cb8c87}} 
+\index{node.\+c@{node.\+c}!not\+\_\+connected@{not\+\_\+connected}}
+\index{not\+\_\+connected@{not\+\_\+connected}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{not\+\_\+connected()}{not\_connected()}}
+{\footnotesize\ttfamily \hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} not\+\_\+connected (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{u,  }\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Function that checks if two nodes u and v are connected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & u\+: The first node \\
+\hline
+{\em N\+O\+D\+E$\ast$} & v\+: The second node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL T\+R\+UE if the nodes u and v are not connected.~\newline
+ F\+A\+L\+SE if u and v are connected. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_ac537b7cd330634c71ec43a4ce258c3b1}\label{node_8c_ac537b7cd330634c71ec43a4ce258c3b1}} 
+\index{node.\+c@{node.\+c}!print\+\_\+node@{print\+\_\+node}}
+\index{print\+\_\+node@{print\+\_\+node}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+node()}{print\_node()}}
+{\footnotesize\ttfamily void print\+\_\+node (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+Function that prints the information of a node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & n\+: the node to print\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_a9bef0eea3e19f9545e070374f5abc055}\label{node_8c_a9bef0eea3e19f9545e070374f5abc055}} 
+\index{node.\+c@{node.\+c}!union\+\_\+adj\+\_\+lists\+\_\+not\+\_\+ordered@{union\+\_\+adj\+\_\+lists\+\_\+not\+\_\+ordered}}
+\index{union\+\_\+adj\+\_\+lists\+\_\+not\+\_\+ordered@{union\+\_\+adj\+\_\+lists\+\_\+not\+\_\+ordered}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{union\+\_\+adj\+\_\+lists\+\_\+not\+\_\+ordered()}{union\_adj\_lists\_not\_ordered()}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ union\+\_\+adj\+\_\+lists\+\_\+not\+\_\+ordered (\begin{DoxyParamCaption}\item[{int $\ast$}]{card\+\_\+S,  }\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{u,  }\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Function that constructs the not ordered union of the adjacency lists of two nodes ~\newline
+ u and v, storing only the neighbor ids and avoiding the insertion of ~\newline
+ u and v (in case they were present in the lists).~\newline
+ The function also fills the parameter card\+\_\+S with the cardinality of the~\newline
+ union. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int$\ast$} & card\+\_\+S\+: The cardinality of the union (to be filled by the function) \\
+\hline
+{\em N\+O\+D\+E$\ast$} & u\+: The first node \\
+\hline
+{\em N\+O\+D\+E$\ast$} & v\+: The second node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t$\ast$ The array containing the node ids of the union. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{node_8c_af2840bd87ae7f23b8f0416f47ddb67da}\label{node_8c_af2840bd87ae7f23b8f0416f47ddb67da}} 
+\index{node.\+c@{node.\+c}!union\+\_\+adj\+\_\+lists\+\_\+ordered@{union\+\_\+adj\+\_\+lists\+\_\+ordered}}
+\index{union\+\_\+adj\+\_\+lists\+\_\+ordered@{union\+\_\+adj\+\_\+lists\+\_\+ordered}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{union\+\_\+adj\+\_\+lists\+\_\+ordered()}{union\_adj\_lists\_ordered()}}
+{\footnotesize\ttfamily uint32\+\_\+t$\ast$ union\+\_\+adj\+\_\+lists\+\_\+ordered (\begin{DoxyParamCaption}\item[{int $\ast$}]{card\+\_\+S,  }\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{u,  }\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{v }\end{DoxyParamCaption})}
+
+
+
+Function that constructs the ordered union of the adjacency lists of two nodes ~\newline
+ u and v, storing only the neighbor ids and avoiding the insertion of ~\newline
+ u and v (in case they were present in the lists).~\newline
+ The function also fills the parameter card\+\_\+S with the cardinality of the ~\newline
+ union. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int$\ast$} & card\+\_\+S\+: The cardinality of the union (to be filled by the function) \\
+\hline
+{\em N\+O\+D\+E$\ast$} & u\+: The first node \\
+\hline
+{\em N\+O\+D\+E$\ast$} & v\+: The second node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t$\ast$ The array containing the node ids of the union. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{node_8c_aa94b0ac5dc0f8919227cda71fe50db38}\label{node_8c_aa94b0ac5dc0f8919227cda71fe50db38}} 
+\index{node.\+c@{node.\+c}!ordered@{ordered}}
+\index{ordered@{ordered}!node.\+c@{node.\+c}}
+\subsubsection{\texorpdfstring{ordered}{ordered}}
+{\footnotesize\ttfamily \hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} ordered}
+
+Flag to determine whether the data managed has to be ordered or not 

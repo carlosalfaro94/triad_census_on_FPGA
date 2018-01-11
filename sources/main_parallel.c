@@ -1,9 +1,19 @@
-/*Main de pruebas*/
 #include "../headers/aux_opencl.h"
 
 #include <getopt.h>
 #include <sys/time.h>
-//#include <time.h>
+
+/**
+  *   @file main_parallel.c
+  *
+  *   @brief This is the main program of the OpenCL application. It executes a user-specified accelerated version of triad census algorithm
+  *   and displays results and execution performances depending on the parameters passed to the program.
+  *   
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 28-12-2017
+  **/
 
 void display_help(char *program);
 

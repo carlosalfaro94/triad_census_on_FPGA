@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+/**
+  *   @file rand_graph_generation.c
+  *
+  *   @brief This program generates a pseudo-random graph of a given number of nodes and edges and writes it to a file.
+  *   
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 28-12-2017
+  **/
+
 int main(int argc, char **argv){
 
 	unsigned long n_nodes;

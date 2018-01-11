@@ -1,0 +1,179 @@
+\hypertarget{aux_8h}{}\section{headers/aux.h File Reference}
+\label{aux_8h}\index{headers/aux.\+h@{headers/aux.\+h}}
+
+
+This file contains the definitions of some auxiliary functions~\newline
+ used by the main program run the program.  
+
+
+{\ttfamily \#include \char`\"{}../headers/triads.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for aux.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aux_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aux_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{aux_8h_a2d7f0126a191ecc47001de15e44eb4f9}{display\+\_\+graph\+\_\+summary} (\hyperlink{structGRAPH}{G\+R\+A\+PH} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Function that displays a summary of graph g printing its number of nodes, edges and triads. \end{DoxyCompactList}\item 
+\hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{aux_8h_a2f5ae95e590fba7aaae015b750080579}{is\+\_\+ordered\+\_\+kernel} (char $\ast$name\+\_\+kernel)
+\begin{DoxyCompactList}\small\item\em Function that checks the name of a kernel to discover if the kernel expects ordered input. \end{DoxyCompactList}\item 
+\hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{aux_8h_abe467f2222de7b22db9f67f5ce6a529c}{is\+\_\+\+N\+D\+Range\+\_\+kernel} (char $\ast$name\+\_\+kernel)
+\begin{DoxyCompactList}\small\item\em Function that checks the name of a kernel to discover if the kernel is a N\+D\+Range kernel. \end{DoxyCompactList}\item 
+\hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{aux_8h_a1b1e4c6a6f5d3a0fc38e4c4cd17aa8e5}{is\+\_\+\+B\+M\+\_\+kernel} (char $\ast$name\+\_\+kernel)
+\begin{DoxyCompactList}\small\item\em Function that checks the name of a kernel to discover if the kernel implements a BM algorithm. \end{DoxyCompactList}\item 
+void \hyperlink{aux_8h_afc44cd39add4462b508953982dfa66b7}{write\+\_\+times} (char $\ast$times\+\_\+name, \hyperlink{structGRAPH}{G\+R\+A\+PH} $\ast$g, double reading\+\_\+time, double execution\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Function that writes performance data to a file. \end{DoxyCompactList}\item 
+void \hyperlink{aux_8h_a3f18520902448cec9b1693f8914ca023}{rand\+\_\+graph\+\_\+generation} (unsigned int num\+\_\+nodes, unsigned int num\+\_\+edges, unsigned int seed, char $\ast$namefile)
+\begin{DoxyCompactList}\small\item\em Function that randomly generates a graph and writes it to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the definitions of some auxiliary functions~\newline
+ used by the main program run the program. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 18-\/12-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{aux_8h_a2d7f0126a191ecc47001de15e44eb4f9}\label{aux_8h_a2d7f0126a191ecc47001de15e44eb4f9}} 
+\index{aux.\+h@{aux.\+h}!display\+\_\+graph\+\_\+summary@{display\+\_\+graph\+\_\+summary}}
+\index{display\+\_\+graph\+\_\+summary@{display\+\_\+graph\+\_\+summary}!aux.\+h@{aux.\+h}}
+\subsubsection{\texorpdfstring{display\+\_\+graph\+\_\+summary()}{display\_graph\_summary()}}
+{\footnotesize\ttfamily void display\+\_\+graph\+\_\+summary (\begin{DoxyParamCaption}\item[{\hyperlink{structGRAPH}{G\+R\+A\+PH} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Function that displays a summary of graph g printing its number of nodes, edges and triads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+R\+A\+P\+H$\ast$} & g\+: The input graph.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux_8h_a1b1e4c6a6f5d3a0fc38e4c4cd17aa8e5}\label{aux_8h_a1b1e4c6a6f5d3a0fc38e4c4cd17aa8e5}} 
+\index{aux.\+h@{aux.\+h}!is\+\_\+\+B\+M\+\_\+kernel@{is\+\_\+\+B\+M\+\_\+kernel}}
+\index{is\+\_\+\+B\+M\+\_\+kernel@{is\+\_\+\+B\+M\+\_\+kernel}!aux.\+h@{aux.\+h}}
+\subsubsection{\texorpdfstring{is\+\_\+\+B\+M\+\_\+kernel()}{is\_BM\_kernel()}}
+{\footnotesize\ttfamily \hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} is\+\_\+\+B\+M\+\_\+kernel (\begin{DoxyParamCaption}\item[{char $\ast$}]{name\+\_\+kernel }\end{DoxyParamCaption})}
+
+
+
+Function that checks the name of a kernel to discover if the kernel implements a BM algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & name\+\_\+kernel\+: The name of the kernel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL\+: T\+R\+UE if the kernel implements BM.~\newline
+ F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux_8h_abe467f2222de7b22db9f67f5ce6a529c}\label{aux_8h_abe467f2222de7b22db9f67f5ce6a529c}} 
+\index{aux.\+h@{aux.\+h}!is\+\_\+\+N\+D\+Range\+\_\+kernel@{is\+\_\+\+N\+D\+Range\+\_\+kernel}}
+\index{is\+\_\+\+N\+D\+Range\+\_\+kernel@{is\+\_\+\+N\+D\+Range\+\_\+kernel}!aux.\+h@{aux.\+h}}
+\subsubsection{\texorpdfstring{is\+\_\+\+N\+D\+Range\+\_\+kernel()}{is\_NDRange\_kernel()}}
+{\footnotesize\ttfamily \hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} is\+\_\+\+N\+D\+Range\+\_\+kernel (\begin{DoxyParamCaption}\item[{char $\ast$}]{name\+\_\+kernel }\end{DoxyParamCaption})}
+
+
+
+Function that checks the name of a kernel to discover if the kernel is a N\+D\+Range kernel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & name\+\_\+kernel\+: The name of the kernel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL\+: T\+R\+UE if it is a N\+D\+Range kernel.~\newline
+ F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux_8h_a2f5ae95e590fba7aaae015b750080579}\label{aux_8h_a2f5ae95e590fba7aaae015b750080579}} 
+\index{aux.\+h@{aux.\+h}!is\+\_\+ordered\+\_\+kernel@{is\+\_\+ordered\+\_\+kernel}}
+\index{is\+\_\+ordered\+\_\+kernel@{is\+\_\+ordered\+\_\+kernel}!aux.\+h@{aux.\+h}}
+\subsubsection{\texorpdfstring{is\+\_\+ordered\+\_\+kernel()}{is\_ordered\_kernel()}}
+{\footnotesize\ttfamily \hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} is\+\_\+ordered\+\_\+kernel (\begin{DoxyParamCaption}\item[{char $\ast$}]{name\+\_\+kernel }\end{DoxyParamCaption})}
+
+
+
+Function that checks the name of a kernel to discover if the kernel expects ordered input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & name\+\_\+kernel\+: The name of the kernel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+B\+O\+OL\+: T\+R\+UE if the kernel expects ordered input.~\newline
+ F\+A\+L\+SE otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux_8h_a3f18520902448cec9b1693f8914ca023}\label{aux_8h_a3f18520902448cec9b1693f8914ca023}} 
+\index{aux.\+h@{aux.\+h}!rand\+\_\+graph\+\_\+generation@{rand\+\_\+graph\+\_\+generation}}
+\index{rand\+\_\+graph\+\_\+generation@{rand\+\_\+graph\+\_\+generation}!aux.\+h@{aux.\+h}}
+\subsubsection{\texorpdfstring{rand\+\_\+graph\+\_\+generation()}{rand\_graph\_generation()}}
+{\footnotesize\ttfamily void rand\+\_\+graph\+\_\+generation (\begin{DoxyParamCaption}\item[{unsigned int}]{num\+\_\+nodes,  }\item[{unsigned int}]{num\+\_\+edges,  }\item[{unsigned int}]{seed,  }\item[{char $\ast$}]{namefile }\end{DoxyParamCaption})}
+
+
+
+Function that randomly generates a graph and writes it to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int num\+\_\+nodes\+: Number of nodes desired. \\
+\hline
+{\em unsigned} & int num\+\_\+edges\+: Number of edges desired. \\
+\hline
+{\em unsigned} & int seed\+: The seed for rand() function \\
+\hline
+{\em char$\ast$} & namefile\+: The name of the file in which to write the graph.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{aux_8h_afc44cd39add4462b508953982dfa66b7}\label{aux_8h_afc44cd39add4462b508953982dfa66b7}} 
+\index{aux.\+h@{aux.\+h}!write\+\_\+times@{write\+\_\+times}}
+\index{write\+\_\+times@{write\+\_\+times}!aux.\+h@{aux.\+h}}
+\subsubsection{\texorpdfstring{write\+\_\+times()}{write\_times()}}
+{\footnotesize\ttfamily void write\+\_\+times (\begin{DoxyParamCaption}\item[{char $\ast$}]{times\+\_\+name,  }\item[{\hyperlink{structGRAPH}{G\+R\+A\+PH} $\ast$}]{g,  }\item[{double}]{reading\+\_\+time,  }\item[{double}]{execution\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Function that writes performance data to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & times\+\_\+name\+: The name of the file in which to write the results. \\
+\hline
+{\em G\+R\+A\+P\+H$\ast$} & g\+: The graph under analysis. \\
+\hline
+{\em double} & reading\+\_\+time\+: Graph reading time. \\
+\hline
+{\em double} & execution time\+: Triad census execution time.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}

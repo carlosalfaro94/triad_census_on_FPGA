@@ -1,5 +1,15 @@
-
 #include "../headers/aux.h"
+
+/**
+  *   @file aux.c
+  *
+  *   @brief This file contains the code that implements the functions defined in the 
+  *   header file aux.h. Please refer to it to check the documentation.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 18-12-2017
+  **/
 
 void display_graph_summary(GRAPH* g){
 	printf("Graph summary\n");

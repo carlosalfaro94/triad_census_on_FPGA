@@ -1,0 +1,133 @@
+\hypertarget{helpers_8h}{}\section{headers/helpers.h File Reference}
+\label{helpers_8h}\index{headers/helpers.\+h@{headers/helpers.\+h}}
+
+
+This file contains the definitions of helper functions used used used to search and insert in arrays. ~\newline
+In our implementation, we have implemented linear search, binary search and insertion sort algorithms. These are useful for a variety of cases, and thus we decided to implement them in a general way.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for helpers.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{helpers_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{helpers_8h_acc35bd25a8a468de5eecd3ac86cad3d6}{linear\+\_\+search} (void $\ast$table, int num\+\_\+elems, size\+\_\+t size, void $\ast$key, int($\ast$comp)(const void $\ast$arg1, const void $\ast$arg2))
+\begin{DoxyCompactList}\small\item\em Function that performs linear search over an unordered array. \end{DoxyCompactList}\item 
+int \hyperlink{helpers_8h_a179fbd21d334a48da1fb846b53dd04f7}{binary\+\_\+search} (void $\ast$table, int first, int last, size\+\_\+t size, void $\ast$key, int($\ast$comp)(const void $\ast$arg1, const void $\ast$arg2))
+\begin{DoxyCompactList}\small\item\em Function that performs binary search over an ordered array. \end{DoxyCompactList}\item 
+void \hyperlink{helpers_8h_abf6d4a9fcd1142a7b5bd256d278f8745}{insert\+\_\+sort} (void $\ast$table, size\+\_\+t size, int nmemb, void $\ast$elem, void $\ast$key, int($\ast$comp)(const void $\ast$arg1, const void $\ast$arg2), void($\ast$insert)(void $\ast$table, void $\ast$key, int pos))
+\begin{DoxyCompactList}\small\item\em Function that performs the insertion sort (inner loop of the algorithm) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the definitions of helper functions used used used to search and insert in arrays. ~\newline
+In our implementation, we have implemented linear search, binary search and insertion sort algorithms. These are useful for a variety of cases, and thus we decided to implement them in a general way. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 19-\/10-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{helpers_8h_a179fbd21d334a48da1fb846b53dd04f7}\label{helpers_8h_a179fbd21d334a48da1fb846b53dd04f7}} 
+\index{helpers.\+h@{helpers.\+h}!binary\+\_\+search@{binary\+\_\+search}}
+\index{binary\+\_\+search@{binary\+\_\+search}!helpers.\+h@{helpers.\+h}}
+\subsubsection{\texorpdfstring{binary\+\_\+search()}{binary\_search()}}
+{\footnotesize\ttfamily int binary\+\_\+search (\begin{DoxyParamCaption}\item[{void $\ast$}]{table,  }\item[{int}]{first,  }\item[{int}]{last,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{key,  }\item[{int($\ast$)(const void $\ast$arg1, const void $\ast$arg2)}]{comp }\end{DoxyParamCaption})}
+
+
+
+Function that performs binary search over an ordered array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & table\+: The array in which to perform the search \\
+\hline
+{\em int} & first\+: the first index of the table \\
+\hline
+{\em int} & last\+: the last index of the table \\
+\hline
+{\em size\+\_\+t} & size\+: size in bytes of each of the elements of the array \\
+\hline
+{\em void$\ast$} & key\+: The key to search within the array \\
+\hline
+{\em int} & ({\itshape comp) (const void} arg1, const void$\ast$ arg2)\+: pointer to the campare function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the position in which the key is stored, if it is found~\newline
+ -\/1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{helpers_8h_abf6d4a9fcd1142a7b5bd256d278f8745}\label{helpers_8h_abf6d4a9fcd1142a7b5bd256d278f8745}} 
+\index{helpers.\+h@{helpers.\+h}!insert\+\_\+sort@{insert\+\_\+sort}}
+\index{insert\+\_\+sort@{insert\+\_\+sort}!helpers.\+h@{helpers.\+h}}
+\subsubsection{\texorpdfstring{insert\+\_\+sort()}{insert\_sort()}}
+{\footnotesize\ttfamily void insert\+\_\+sort (\begin{DoxyParamCaption}\item[{void $\ast$}]{table,  }\item[{size\+\_\+t}]{size,  }\item[{int}]{nmemb,  }\item[{void $\ast$}]{elem,  }\item[{void $\ast$}]{key,  }\item[{int($\ast$)(const void $\ast$arg1, const void $\ast$arg2)}]{comp,  }\item[{void($\ast$)(void $\ast$table, void $\ast$key, int pos)}]{insert }\end{DoxyParamCaption})}
+
+
+
+Function that performs the insertion sort (inner loop of the algorithm) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & table\+: The array in which to perform the insertion \\
+\hline
+{\em size\+\_\+t} & size\+: size in bytes of each of the elements of the array \\
+\hline
+{\em int} & nmemb\+: Number of elements present in the array \\
+\hline
+{\em void$\ast$} & elem\+: element to insert \\
+\hline
+{\em void} & $\ast$key\+: key associated to the element, useful to compare to other elements \\
+\hline
+{\em int} & ({\itshape comp) (const void} arg1, const void$\ast$ arg2)\+: pointer to the compare function void ({\itshape insert)(void} table, void$\ast$ key, int pos)\+:pointer to the insertion function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the position in which the key is stored, if it is found -\/1 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{helpers_8h_acc35bd25a8a468de5eecd3ac86cad3d6}\label{helpers_8h_acc35bd25a8a468de5eecd3ac86cad3d6}} 
+\index{helpers.\+h@{helpers.\+h}!linear\+\_\+search@{linear\+\_\+search}}
+\index{linear\+\_\+search@{linear\+\_\+search}!helpers.\+h@{helpers.\+h}}
+\subsubsection{\texorpdfstring{linear\+\_\+search()}{linear\_search()}}
+{\footnotesize\ttfamily int linear\+\_\+search (\begin{DoxyParamCaption}\item[{void $\ast$}]{table,  }\item[{int}]{num\+\_\+elems,  }\item[{size\+\_\+t}]{size,  }\item[{void $\ast$}]{key,  }\item[{int($\ast$)(const void $\ast$arg1, const void $\ast$arg2)}]{comp }\end{DoxyParamCaption})}
+
+
+
+Function that performs linear search over an unordered array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void$\ast$} & table\+: The array in which to perform the search \\
+\hline
+{\em int} & num\+\_\+elems\+: Number of elements in the array \\
+\hline
+{\em size\+\_\+t} & size\+: size in bytes of each of the elements of the array \\
+\hline
+{\em void$\ast$} & key\+: The key to search within the array \\
+\hline
+{\em int} & ({\itshape comp) (const void} arg1, const void$\ast$ arg2)\+: pointer to the campare function\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the position in which the key is stored, if it is found~\newline
+ -\/1 otherwise 
+\end{DoxyReturn}

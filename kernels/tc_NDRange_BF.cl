@@ -1,14 +1,24 @@
 #include "BF_header.h"
 
+/**
+  *   @file tc_NDRange_BF.cl
+  *
+  *   @brief This file contains the code that implements Brute-Force algorithm 
+  * 		 over not ordered arrays using a NDRange kernel.\n The rest of the 
+  * 		 functions are auxiliary functions. Please check their documentation in
+  *			 BF_header.h.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 28-11-2017
+  **/
+
 __kernel void NDRange_BF(__constant NODE_DEVICE* restrict node_list, __constant EDGE_DEVICE* restrict edge_list, __global CENSUS* census_array, uint num_nodes){
 	
 	unsigned int i,j,k;
 	short tritype;
 
 	i = get_global_id(0);
-	//for(j=0;j<16;j++){
-	//	census_array[i].census[j] = 0;
-	//}
 	for (j=i+1;j<num_nodes;j++){
 		for(k=j+1;k<num_nodes;k++){
 			tritype = isoTricode(edge_list, &(node_list[i]), &(node_list[j]), &(node_list[k]));

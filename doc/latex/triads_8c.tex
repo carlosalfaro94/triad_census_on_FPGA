@@ -1,0 +1,180 @@
+\hypertarget{triads_8c}{}\section{sources/triads.c File Reference}
+\label{triads_8c}\index{sources/triads.\+c@{sources/triads.\+c}}
+
+
+This file contains the code that implements the functions defined in the header file \hyperlink{triads_8h}{triads.\+h}. Please refer to it to check the documentation.  
+
+
+{\ttfamily \#include \char`\"{}../headers/triads.\+h\char`\"{}}\newline
+Include dependency graph for triads.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{triads_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t $\ast$ \hyperlink{triads_8c_a33470219fe7e4ce1cf0e82ac26332b54}{triad\+\_\+census\+\_\+\+BF} (\hyperlink{structGRAPH}{G\+R\+A\+PH} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Function that implements the Brute Force version of the triad census algorithm. \end{DoxyCompactList}\item 
+uint64\+\_\+t $\ast$ \hyperlink{triads_8c_a5a46cb68a0606e745017030524e45098}{triad\+\_\+census\+\_\+\+BM} (\hyperlink{structGRAPH}{G\+R\+A\+PH} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Function that implements the Batagelj and Mrvar\textquotesingle{}s version of the triad census algorithm. \end{DoxyCompactList}\item 
+void \hyperlink{triads_8c_a1bd1905d86d16197b1549c6d41d53b7f}{print\+\_\+triad\+\_\+census} (uint64\+\_\+t $\ast$triads)
+\begin{DoxyCompactList}\small\item\em Function that prints the triad census. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{triads_8c_ad1c0b7566793ee176e8ac06caf18d238}{return\+\_\+code} (int $\ast$triads)
+\begin{DoxyCompactList}\small\item\em Function returns the code of a triad (for testing purposes) \end{DoxyCompactList}\item 
+int \hyperlink{triads_8c_aba89c0fb106399c0731b4cfbcd0e743e}{iso\+Tricode} (\hyperlink{structNODE}{N\+O\+DE} $\ast$u, \hyperlink{structNODE}{N\+O\+DE} $\ast$v, \hyperlink{structNODE}{N\+O\+DE} $\ast$w)
+\begin{DoxyCompactList}\small\item\em Function that computes the triad type of a triple of nodes. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{triads_8c_af9d36341671cf11b24be96d4d1228181}{num\+\_\+total\+\_\+triads} (uint32\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Function that computes and returns the number of triads present in a graph of n nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} \hyperlink{triads_8c_aa94b0ac5dc0f8919227cda71fe50db38}{ordered}
+\item 
+const char $\ast$ \hyperlink{triads_8c_a0f89b54966792be00877b79036adb727}{triad\+\_\+codes} \mbox{[}\hyperlink{utils_8h_ab2bde72626290c6daf5da1e9517aa8fb}{N\+U\+M\+\_\+\+T\+R\+I\+A\+DS}\mbox{]} = \{\char`\"{}003\char`\"{},\char`\"{}012\char`\"{},\char`\"{}102\char`\"{},\char`\"{}021\+D\char`\"{},\char`\"{}021\+U\char`\"{},\char`\"{}021\+C\char`\"{},\char`\"{}111\+D\char`\"{},\char`\"{}111\+U\char`\"{},\char`\"{}030\+T\char`\"{},\char`\"{}030\+C\char`\"{},\char`\"{}201\char`\"{},\char`\"{}120\+D\char`\"{},\char`\"{}120\+U\char`\"{},\char`\"{}120\+C\char`\"{},\char`\"{}210\char`\"{},\char`\"{}300\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains the code that implements the functions defined in the header file \hyperlink{triads_8h}{triads.\+h}. Please refer to it to check the documentation. 
+
+\begin{DoxyAuthor}{Author}
+\+: Carlos Alfaro
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 23-\/10-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{triads_8c_aba89c0fb106399c0731b4cfbcd0e743e}\label{triads_8c_aba89c0fb106399c0731b4cfbcd0e743e}} 
+\index{triads.\+c@{triads.\+c}!iso\+Tricode@{iso\+Tricode}}
+\index{iso\+Tricode@{iso\+Tricode}!triads.\+c@{triads.\+c}}
+\subsubsection{\texorpdfstring{iso\+Tricode()}{isoTricode()}}
+{\footnotesize\ttfamily int iso\+Tricode (\begin{DoxyParamCaption}\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{u,  }\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{v,  }\item[{\hyperlink{structNODE}{N\+O\+DE} $\ast$}]{w }\end{DoxyParamCaption})}
+
+
+
+Function that computes the triad type of a triple of nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+O\+D\+E$\ast$} & u\+: First node of the triple \\
+\hline
+{\em N\+O\+D\+E$\ast$} & v\+: Second node of the triple \\
+\hline
+{\em N\+O\+D\+E$\ast$} & w\+: Third node of the triple\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: A number between 0 and 15, depending on the configuration of the triple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{triads_8c_af9d36341671cf11b24be96d4d1228181}\label{triads_8c_af9d36341671cf11b24be96d4d1228181}} 
+\index{triads.\+c@{triads.\+c}!num\+\_\+total\+\_\+triads@{num\+\_\+total\+\_\+triads}}
+\index{num\+\_\+total\+\_\+triads@{num\+\_\+total\+\_\+triads}!triads.\+c@{triads.\+c}}
+\subsubsection{\texorpdfstring{num\+\_\+total\+\_\+triads()}{num\_total\_triads()}}
+{\footnotesize\ttfamily uint64\+\_\+t num\+\_\+total\+\_\+triads (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+
+
+Function that computes and returns the number of triads present in a graph of n nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uint32\+\_\+t} & n\+: The number of nodes of a graph\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t\+: The number of total triads 
+\end{DoxyReturn}
+\mbox{\Hypertarget{triads_8c_a1bd1905d86d16197b1549c6d41d53b7f}\label{triads_8c_a1bd1905d86d16197b1549c6d41d53b7f}} 
+\index{triads.\+c@{triads.\+c}!print\+\_\+triad\+\_\+census@{print\+\_\+triad\+\_\+census}}
+\index{print\+\_\+triad\+\_\+census@{print\+\_\+triad\+\_\+census}!triads.\+c@{triads.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+triad\+\_\+census()}{print\_triad\_census()}}
+{\footnotesize\ttfamily void print\+\_\+triad\+\_\+census (\begin{DoxyParamCaption}\item[{uint64\+\_\+t $\ast$}]{triads }\end{DoxyParamCaption})}
+
+
+
+Function that prints the triad census. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int$\ast$} & census\+: The vector containing the triad census\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{triads_8c_ad1c0b7566793ee176e8ac06caf18d238}\label{triads_8c_ad1c0b7566793ee176e8ac06caf18d238}} 
+\index{triads.\+c@{triads.\+c}!return\+\_\+code@{return\+\_\+code}}
+\index{return\+\_\+code@{return\+\_\+code}!triads.\+c@{triads.\+c}}
+\subsubsection{\texorpdfstring{return\+\_\+code()}{return\_code()}}
+{\footnotesize\ttfamily const char$\ast$ return\+\_\+code (\begin{DoxyParamCaption}\item[{int $\ast$}]{census }\end{DoxyParamCaption})}
+
+
+
+Function returns the code of a triad (for testing purposes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int$\ast$} & census\+: The vector containing the triad census\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char$\ast$\+: The triad code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{triads_8c_a33470219fe7e4ce1cf0e82ac26332b54}\label{triads_8c_a33470219fe7e4ce1cf0e82ac26332b54}} 
+\index{triads.\+c@{triads.\+c}!triad\+\_\+census\+\_\+\+BF@{triad\+\_\+census\+\_\+\+BF}}
+\index{triad\+\_\+census\+\_\+\+BF@{triad\+\_\+census\+\_\+\+BF}!triads.\+c@{triads.\+c}}
+\subsubsection{\texorpdfstring{triad\+\_\+census\+\_\+\+B\+F()}{triad\_census\_BF()}}
+{\footnotesize\ttfamily uint64\+\_\+t$\ast$ triad\+\_\+census\+\_\+\+BF (\begin{DoxyParamCaption}\item[{\hyperlink{structGRAPH}{G\+R\+A\+PH} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Function that implements the Brute Force version of the triad census algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+R\+A\+P\+H$\ast$} & g\+: Pointer to the graph of which we want to perform the triad census\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\ast$\+: a vector containing the triad counts 
+\end{DoxyReturn}
+\mbox{\Hypertarget{triads_8c_a5a46cb68a0606e745017030524e45098}\label{triads_8c_a5a46cb68a0606e745017030524e45098}} 
+\index{triads.\+c@{triads.\+c}!triad\+\_\+census\+\_\+\+BM@{triad\+\_\+census\+\_\+\+BM}}
+\index{triad\+\_\+census\+\_\+\+BM@{triad\+\_\+census\+\_\+\+BM}!triads.\+c@{triads.\+c}}
+\subsubsection{\texorpdfstring{triad\+\_\+census\+\_\+\+B\+M()}{triad\_census\_BM()}}
+{\footnotesize\ttfamily uint64\+\_\+t$\ast$ triad\+\_\+census\+\_\+\+BM (\begin{DoxyParamCaption}\item[{\hyperlink{structGRAPH}{G\+R\+A\+PH} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Function that implements the Batagelj and Mrvar\textquotesingle{}s version of the triad census algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+R\+A\+P\+H$\ast$} & g\+: Pointer to the graph of which we want to perform the triad census\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int$\ast$\+: a vector containing the triad counts 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{triads_8c_aa94b0ac5dc0f8919227cda71fe50db38}\label{triads_8c_aa94b0ac5dc0f8919227cda71fe50db38}} 
+\index{triads.\+c@{triads.\+c}!ordered@{ordered}}
+\index{ordered@{ordered}!triads.\+c@{triads.\+c}}
+\subsubsection{\texorpdfstring{ordered}{ordered}}
+{\footnotesize\ttfamily \hyperlink{utils_8h_a3e5b8192e7d9ffaf3542f1210aec18dd}{B\+O\+OL} ordered}
+
+Flag to determine whether the data managed has to be ordered or not \mbox{\Hypertarget{triads_8c_a0f89b54966792be00877b79036adb727}\label{triads_8c_a0f89b54966792be00877b79036adb727}} 
+\index{triads.\+c@{triads.\+c}!triad\+\_\+codes@{triad\+\_\+codes}}
+\index{triad\+\_\+codes@{triad\+\_\+codes}!triads.\+c@{triads.\+c}}
+\subsubsection{\texorpdfstring{triad\+\_\+codes}{triad\_codes}}
+{\footnotesize\ttfamily const char$\ast$ triad\+\_\+codes\mbox{[}\hyperlink{utils_8h_ab2bde72626290c6daf5da1e9517aa8fb}{N\+U\+M\+\_\+\+T\+R\+I\+A\+DS}\mbox{]} = \{\char`\"{}003\char`\"{},\char`\"{}012\char`\"{},\char`\"{}102\char`\"{},\char`\"{}021\+D\char`\"{},\char`\"{}021\+U\char`\"{},\char`\"{}021\+C\char`\"{},\char`\"{}111\+D\char`\"{},\char`\"{}111\+U\char`\"{},\char`\"{}030\+T\char`\"{},\char`\"{}030\+C\char`\"{},\char`\"{}201\char`\"{},\char`\"{}120\+D\char`\"{},\char`\"{}120\+U\char`\"{},\char`\"{}120\+C\char`\"{},\char`\"{}210\char`\"{},\char`\"{}300\char`\"{}\}}
+
+Triad codes 

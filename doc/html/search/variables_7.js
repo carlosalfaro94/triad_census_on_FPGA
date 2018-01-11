@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['v',['v',['../structTASK.html#aa8bc9e3d0203b93cfc0dd927e3972fde',1,'TASK']]]
+  ['triad_5fcodes',['triad_codes',['../triads_8c.html#a0f89b54966792be00877b79036adb727',1,'triads.c']]]
 ];

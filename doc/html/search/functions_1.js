@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['comp_5fedges',['comp_edges',['../edge_8h.html#afe003267551a5687d635d20f78f00c84',1,'edge.h']]],
-  ['comp_5fids',['comp_ids',['../node_8h.html#ab797719885a33013788cb2d4b248a36e',1,'node.h']]],
-  ['comp_5fnodes_5fby_5fdegree',['comp_nodes_by_degree',['../node_8h.html#ac2c976ce0d52406c4df50195371276b8',1,'node.h']]],
-  ['comp_5fnodes_5fby_5fid',['comp_nodes_by_id',['../node_8h.html#aab41692fa3f3d5214a5dadb4f616a853',1,'node.h']]],
-  ['convert_5fgraph',['convert_graph',['../graph_8h.html#a5aab9084b4ffec389343766cf27bf752',1,'graph.h']]],
-  ['create_5fedge',['create_edge',['../edge_8h.html#a15ac9743daa3a7d6ade50b68d6de86eb',1,'edge.h']]],
-  ['create_5fnode',['create_node',['../node_8h.html#a44b280e18f7f2ff59e126501cb5da4cf',1,'node.h']]],
-  ['create_5ftasks_5farray',['create_tasks_array',['../graph_8h.html#a918eb6777060cb3eecf14703db2b1b76',1,'graph.h']]]
+  ['binary_5fsearch',['binary_search',['../helpers_8h.html#a179fbd21d334a48da1fb846b53dd04f7',1,'binary_search(void *table, int first, int last, size_t size, void *key, int(*comp)(const void *arg1, const void *arg2)):&#160;helpers.c'],['../helpers_8c.html#a179fbd21d334a48da1fb846b53dd04f7',1,'binary_search(void *table, int first, int last, size_t size, void *key, int(*comp)(const void *arg1, const void *arg2)):&#160;helpers.c']]],
+  ['binary_5fsearch_5fadj_5flist',['binary_search_adj_list',['../BF__header_8h.html#a0de6df960ecbc500aeb43bb72bbe3d24',1,'binary_search_adj_list(__constant EDGE_DEVICE *table, unsigned int key, int first, int last):&#160;BF_header.h'],['../NDRange__BM__header_8h.html#a5486ebd7f130983e18b921595f7524ab',1,'binary_search_adj_list(__constant EDGE_DEVICE *table, uint key, int first, int last):&#160;NDRange_BM_header.h'],['../single__BM__header_8h.html#adfac5a560df38bc43d0300555971355f',1,'binary_search_adj_list(EDGE_DEVICE *table, uint key, int first, int last):&#160;single_BM_header.h']]],
+  ['binary_5fsearch_5fnode_5flist_5fnorec',['binary_search_node_list_norec',['../single__BM__header_8h.html#a07f4573e769f536ee927d08b1377a0ae',1,'single_BM_header.h']]]
 ];

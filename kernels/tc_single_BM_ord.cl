@@ -1,7 +1,19 @@
-
 #include "single_BM_header.h"
 
 
+
+/**
+  *   @file tc_single_BM_ord.cl
+  *
+  *   @brief This file contains the code that implements Batagelj and Mrvar's algorithm 
+  * 		 over ordered arrays using a single work-item kernels.\n The rest of the 
+  * 		 functions are auxiliary functions. Please check their documentation in
+  *			 single_BM_header.h.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 28-11-2017
+  **/
 
 __kernel void single_BM_ord(__constant NODE_DEVICE* restrict node_list, __constant EDGE_DEVICE* restrict edge_list, __global unsigned long* census, uint num_nodes){
 	unsigned int i,j,k,l;

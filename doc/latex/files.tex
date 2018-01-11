@@ -1,7 +1,10 @@
 \section{File List}
 Here is a list of all documented files with brief descriptions\+:\begin{DoxyCompactList}
-\item\contentsline{section}{headers/{\bfseries aux.\+h} }{\pageref{aux_8h}}{}
-\item\contentsline{section}{headers/{\bfseries aux\+\_\+opencl.\+h} }{\pageref{aux__opencl_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{aux_8h}{aux.\+h} \\*This file contains the definitions of some auxiliary functions~\newline
+ used by the main program run the program }{\pageref{aux_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{aux__opencl_8h}{aux\+\_\+opencl.\+h} \\*This file contains the definitions of the auxiliary functions~\newline
+ used by the main program run the Open\+CL application. It includes functions~\newline
+ to create the objects necessary to execute the application }{\pageref{aux__opencl_8h}}{}
 \item\contentsline{section}{headers/\hyperlink{BF__header_8h}{B\+F\+\_\+header.\+h} \\*This file contains the definitions of the functions needed to execute the Brute Force kernels }{\pageref{BF__header_8h}}{}
 \item\contentsline{section}{headers/\hyperlink{defs_8h}{defs.\+h} \\*This file contains the definitions of the structures that are used for the kernel code }{\pageref{defs_8h}}{}
 \item\contentsline{section}{headers/\hyperlink{edge_8h}{edge.\+h} \\*This file contains the definitions of the functions needed to create and manage an edge of a graph.  within project, we consider only directed graphs; edges must have a direction. ~\newline
@@ -13,7 +16,8 @@ In our implementation, edge information is saved twice, since each of the nodes 
 In our implementation, the graph is read from a file which, in each of its lines, contains an edge of the graph in this format\+:~\newline
  src\+\_\+node\+\_\+id tgt\+\_\+node\+\_\+id ~\newline
 In the structure, nodes can be ordered by ascending order of their ids }{\pageref{graph_8h}}{}
-\item\contentsline{section}{headers/{\bfseries helpers.\+h} }{\pageref{helpers_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{helpers_8h}{helpers.\+h} \\*This file contains the definitions of helper functions used used used to search and insert in arrays. ~\newline
+In our implementation, we have implemented linear search, binary search and insertion sort algorithms. These are useful for a variety of cases, and thus we decided to implement them in a general way }{\pageref{helpers_8h}}{}
 \item\contentsline{section}{headers/\hyperlink{NDRange__BM__header_8h}{N\+D\+Range\+\_\+\+B\+M\+\_\+header.\+h} \\*This file contains the definitions of the functions needed to execute the N\+D\+Range BM kernels }{\pageref{NDRange__BM__header_8h}}{}
 \item\contentsline{section}{headers/\hyperlink{node_8h}{node.\+h} \\*This file contains the definitions of the functions ~\newline
 needed to create and manage a node of a graph. ~\newline
@@ -23,6 +27,19 @@ node keeps track of its adjacency list, bi means of an array of ~\newline
 edges. Since each edge connects two nodes, edge information will ~\newline
 be duplicated }{\pageref{node_8h}}{}
 \item\contentsline{section}{headers/\hyperlink{single__BM__header_8h}{single\+\_\+\+B\+M\+\_\+header.\+h} \\*This file contains the definitions of the functions needed to execute the single BM kernels }{\pageref{single__BM__header_8h}}{}
-\item\contentsline{section}{headers/{\bfseries triads.\+h} }{\pageref{triads_8h}}{}
+\item\contentsline{section}{headers/\hyperlink{triads_8h}{triads.\+h} \\*This file contains the definitions of the functions needed to implement the secuential versions of the Triad Census algorithms. ~\newline
+We have implemented the Brute Force (BF) algorithm and the Batagelj and Mrvar\textquotesingle{}s (BM) algorithm }{\pageref{triads_8h}}{}
 \item\contentsline{section}{headers/\hyperlink{utils_8h}{utils.\+h} \\*This file contains the enumerations and macros needed for the whole project }{\pageref{utils_8h}}{}
+\item\contentsline{section}{sources/\hyperlink{aux_8c}{aux.\+c} \\*This file contains the code that implements the functions defined in the header file \hyperlink{aux_8h}{aux.\+h}. Please refer to it to check the documentation }{\pageref{aux_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{aux__opencl_8c}{aux\+\_\+opencl.\+c} \\*This file contains the code that implements the functions defined in the header file \hyperlink{aux__opencl_8h}{aux\+\_\+opencl.\+h}. Please refer to it to check the documentation }{\pageref{aux__opencl_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{edge_8c}{edge.\+c} \\*This file contains the code that implements the functions defined in the header file \hyperlink{edge_8h}{edge.\+h}. Please refer to it to check the documentation }{\pageref{edge_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{graph_8c}{graph.\+c} \\*This file contains the code that implements the functions defined in the header file \hyperlink{graph_8h}{graph.\+h}. Please refer to it to check the documentation }{\pageref{graph_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{helpers_8c}{helpers.\+c} \\*This file contains the code that implements the functions defined in the header file \hyperlink{helpers_8h}{helpers.\+h}. Please refer to it to check the documentation }{\pageref{helpers_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{main__parallel_8c}{main\+\_\+parallel.\+c} \\*This is the main program of the Open\+CL application. It executes a user-\/specified accelerated version of triad census algorithm and displays results and execution performances depending on the parameters passed to the program }{\pageref{main__parallel_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{main__sequential_8c}{main\+\_\+sequential.\+c} \\*This is the main program of the sequential application. It executes a user-\/specified sequential version of triad census algorithm and displays results and execution performances depending on the parameters passed to the program }{\pageref{main__sequential_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{node_8c}{node.\+c} \\*This file contains the code that implements the functions defined in the header file \hyperlink{node_8h}{node.\+h}. Please refer to it to check the documentation }{\pageref{node_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{rand__graph__generation_8c}{rand\+\_\+graph\+\_\+generation.\+c} \\*This program generates a pseudo-\/random graph of a given number of nodes and edges and writes it to a file }{\pageref{rand__graph__generation_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{times__parallel_8c}{times\+\_\+parallel.\+c} \\*This program collects execution performances of a user-\/specified accelerated version of the triad census algorithm and writes them to a file }{\pageref{times__parallel_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{times__sequential_8c}{times\+\_\+sequential.\+c} \\*This program collects execution performances of a user-\/specified sequential version of the triad census algorithm and writes them to a file }{\pageref{times__sequential_8c}}{}
+\item\contentsline{section}{sources/\hyperlink{triads_8c}{triads.\+c} \\*This file contains the code that implements the functions defined in the header file \hyperlink{triads_8h}{triads.\+h}. Please refer to it to check the documentation }{\pageref{triads_8c}}{}
 \end{DoxyCompactList}

@@ -1,5 +1,16 @@
 #include "../headers/node.h"
 
+/**
+  *   @file node.c
+  *
+  *   @brief This file contains the code that implements the functions defined in the 
+  *   header file node.h. Please refer to it to check the documentation.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 23-10-2017
+  **/
+
 extern BOOL ordered;   /*!< Flag to determine whether the data managed has to be ordered or not */
 
 NODE* create_node(uint32_t node_id){

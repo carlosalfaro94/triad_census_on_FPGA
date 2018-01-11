@@ -1,6 +1,19 @@
 #include "BF_header.h"
 
 
+/**
+  *   @file tc_single_BF.cl
+  *
+  *   @brief This file contains the code that implements Brute-Force algorithm 
+  * 		 over not ordered arrays using a single work-item kernel.\n The rest of the 
+  * 		 functions are auxiliary functions. Please check their documentation in
+  *			 BF_header.h.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 28-11-2017
+  **/
+
 __kernel void single_BF(__constant NODE_DEVICE* restrict node_list, __constant EDGE_DEVICE* restrict edge_list, __global ulong* census, uint num_nodes){
 	unsigned int i, j, k;
 	short tritype;

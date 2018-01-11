@@ -1,7 +1,19 @@
 #include "../headers/triads.h"
 
-extern BOOL ordered;
-const char* triad_codes[NUM_TRIADS] = {"003","012","102","021D","021U","021C","111D","111U","030T","030C","201","120D","120U","120C","210","300"};
+
+/**
+  *   @file triads.c
+  *
+  *   @brief This file contains the code that implements the functions defined in the 
+  *   header file triads.h. Please refer to it to check the documentation.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 23-10-2017
+  **/
+
+extern BOOL ordered; /*!< Flag to determine whether the data managed has to be ordered or not */
+const char* triad_codes[NUM_TRIADS] = {"003","012","102","021D","021U","021C","111D","111U","030T","030C","201","120D","120U","120C","210","300"};  /*!< Triad codes */
 
 uint64_t* triad_census_BF(GRAPH* g){
 	uint64_t* triads;

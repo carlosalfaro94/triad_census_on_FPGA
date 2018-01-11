@@ -1,8 +1,18 @@
-//#include "ihc_apint.h"
 #include "NDRange_BM_header.h"
 
 
-
+/**
+  *   @file tc_NDRange_BM_ord.cl
+  *
+  *   @brief This file contains the code that implements Batagelj and Mrvar's algorithm 
+  * 		 over ordered arrays using a NDRange kernel.\n The rest of the 
+  * 		 functions are auxiliary functions. Please check their documentation in
+  *			 NDRange_BM_header.h.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 28-11-2017
+  **/
 
 __kernel void NDRange_BM_ord(__constant TASK* restrict tasks, __constant EDGE_DEVICE* restrict edge_list, __global CENSUS* census_array, uint num_nodes){
 	size_t i;

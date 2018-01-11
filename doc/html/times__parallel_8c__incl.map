@@ -1,0 +1,11 @@
+<map id="sources/times_parallel.c" name="sources/times_parallel.c">
+<area shape="rect" id="node2" href="$aux__opencl_8h.html" title="This file contains the definitions of the auxiliary functions &#160;used by the main program run the OpenC..." alt="" coords="193,80,354,107"/>
+<area shape="rect" id="node4" href="$aux_8h.html" title="This file contains the definitions of some auxiliary functions &#160;used by the main program run the prog..." alt="" coords="295,155,350,181"/>
+<area shape="rect" id="node5" href="$triads_8h.html" title="This file contains the definitions of the functions needed to implement the secuential versions of th..." alt="" coords="199,229,326,256"/>
+<area shape="rect" id="node6" href="$graph_8h.html" title="This file contains the definitions of the functions needed to create and manage a graph..." alt="" coords="230,304,295,331"/>
+<area shape="rect" id="node7" href="$node_8h.html" title="This file contains the definitions of the functions &#160;needed to create and manage a node of a graph..." alt="" coords="232,379,293,405"/>
+<area shape="rect" id="node8" href="$edge_8h.html" title="This file contains the definitions of the functions needed to create and manage an edge of a graph..." alt="" coords="187,453,248,480"/>
+<area shape="rect" id="node14" href="$helpers_8h.html" title="This file contains the definitions of helper functions used used used to search and insert in arrays..." alt="" coords="272,453,347,480"/>
+<area shape="rect" id="node9" href="$defs_8h.html" title="This file contains the definitions of the structures that are used for the kernel code..." alt="" coords="5,528,64,555"/>
+<area shape="rect" id="node10" href="$utils_8h.html" title="This file contains the enumerations and macros needed for the whole project. " alt="" coords="6,603,63,629"/>
+</map>

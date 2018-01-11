@@ -37,7 +37,7 @@ typedef uint32_t EDGE;   /*!< An edge is coded as an unsigned integer of 32 bits
 EDGE create_edge(uint32_t edge_id, DIRECTION dir);
 
 /**
-  * @brief Function that returns the neighobor id of an edge
+  * @brief Function that returns the neighbor id of an edge
   * 
   * @param EDGE e: The edge
   * 
@@ -52,7 +52,7 @@ uint32_t get_neighbor_id(EDGE e);
   * 
   * @param EDGE e: The edge
   * 
-  * @return uint32_t: The direction of the edge
+  * @return DIRECTION: The direction of the edge
   *	
   **/
 DIRECTION get_direction(EDGE e);

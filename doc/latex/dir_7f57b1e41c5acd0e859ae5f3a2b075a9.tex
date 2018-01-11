@@ -3,6 +3,13 @@
 \subsection*{Files}
 \begin{DoxyCompactItemize}
 \item 
+file \hyperlink{aux_8h}{aux.\+h}
+\begin{DoxyCompactList}\small\item\em This file contains the definitions of some auxiliary functions~\newline
+ used by the main program run the program. \end{DoxyCompactList}\item 
+file \hyperlink{aux__opencl_8h}{aux\+\_\+opencl.\+h}
+\begin{DoxyCompactList}\small\item\em This file contains the definitions of the auxiliary functions~\newline
+ used by the main program run the Open\+CL application. It includes functions~\newline
+ to create the objects necessary to execute the application. \end{DoxyCompactList}\item 
 file \hyperlink{BF__header_8h}{B\+F\+\_\+header.\+h}
 \begin{DoxyCompactList}\small\item\em This file contains the definitions of the functions needed to execute the Brute Force kernels. \end{DoxyCompactList}\item 
 file \hyperlink{defs_8h}{defs.\+h}
@@ -18,6 +25,9 @@ file \hyperlink{graph_8h}{graph.\+h}
 In our implementation, the graph is read from a file which, in each of its lines, contains an edge of the graph in this format\+:~\newline
  src\+\_\+node\+\_\+id tgt\+\_\+node\+\_\+id ~\newline
 In the structure, nodes can be ordered by ascending order of their ids. \end{DoxyCompactList}\item 
+file \hyperlink{helpers_8h}{helpers.\+h}
+\begin{DoxyCompactList}\small\item\em This file contains the definitions of helper functions used used used to search and insert in arrays. ~\newline
+In our implementation, we have implemented linear search, binary search and insertion sort algorithms. These are useful for a variety of cases, and thus we decided to implement them in a general way. \end{DoxyCompactList}\item 
 file \hyperlink{NDRange__BM__header_8h}{N\+D\+Range\+\_\+\+B\+M\+\_\+header.\+h}
 \begin{DoxyCompactList}\small\item\em This file contains the definitions of the functions needed to execute the N\+D\+Range BM kernels. \end{DoxyCompactList}\item 
 file \hyperlink{node_8h}{node.\+h}
@@ -30,5 +40,8 @@ edges. Since each edge connects two nodes, edge information will ~\newline
 be duplicated. \end{DoxyCompactList}\item 
 file \hyperlink{single__BM__header_8h}{single\+\_\+\+B\+M\+\_\+header.\+h}
 \begin{DoxyCompactList}\small\item\em This file contains the definitions of the functions needed to execute the single BM kernels. \end{DoxyCompactList}\item 
+file \hyperlink{triads_8h}{triads.\+h}
+\begin{DoxyCompactList}\small\item\em This file contains the definitions of the functions needed to implement the secuential versions of the Triad Census algorithms. ~\newline
+We have implemented the Brute Force (BF) algorithm and the Batagelj and Mrvar\textquotesingle{}s (BM) algorithm. \end{DoxyCompactList}\item 
 file \hyperlink{utils_8h}{utils.\+h}
 \begin{DoxyCompactList}\small\item\em This file contains the enumerations and macros needed for the whole project. \end{DoxyCompactList}\end{DoxyCompactItemize}

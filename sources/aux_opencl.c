@@ -2,6 +2,17 @@
 #include "../headers/aux_opencl.h"
 
 
+/**
+  *   @file aux_opencl.c
+  *
+  *   @brief This file contains the code that implements the functions defined in the 
+  *   header file aux_opencl.h. Please refer to it to check the documentation.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 18-12-2017
+  **/
+
 
 
 void setup(cl_platform_id* platform, cl_device_id* device, cl_context* context){

@@ -1,10 +1,21 @@
-/*Main de pruebas*/
-
 #include "../headers/aux.h"
+
 #include <string.h>
 #include <getopt.h>
 #include <sys/time.h>
 
+
+/**
+  *   @file times_sequential.c
+  *
+  *   @brief This program collects execution performances of a user-specified sequential version of the triad census algorithm
+  *   and writes them to a file
+  *   
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 28-12-2017
+  **/
 
 #define MAX_CHAR 256
 #define MAX_FUNC 5

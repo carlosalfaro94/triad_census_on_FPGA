@@ -1,6 +1,17 @@
 #include "../headers/edge.h"
 
 
+/**
+  *   @file edge.c
+  *
+  *   @brief This file contains the code that implements the functions defined in the 
+  *   header file edge.h. Please refer to it to check the documentation.
+  *
+  *   @author: Carlos Alfaro
+  *
+  *   @date: 23-10-2017
+  **/
+
 
 
 EDGE create_edge(uint32_t edge_id, DIRECTION dir){

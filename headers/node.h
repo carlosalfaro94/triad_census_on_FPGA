@@ -60,11 +60,11 @@ STATUS add_edge_to_node(NODE* n, uint32_t neighbor_id, DIRECTION dir);
 /** Getter functions **/
 
 /**
-  * @brief Function that returns the position of a certain noighbor node 
+  * @brief Function that returns the position of a certain neighbor node 
   * within the adjacency list of the node, given the neighbor id
   * 
   * @param NODE* n: The node of which we want to get the neighbor position
-  * @param uint32_t neighbor_id: The node id of the neighbor we want search
+  * @param uint32_t neighbor_id: The node id of the neighbor we want to search
   * 
   * @return int: The position within the adjacency list
   *

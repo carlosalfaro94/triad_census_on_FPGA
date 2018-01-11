@@ -1,0 +1,5 @@
+<map id="headers/aux_opencl.h" name="headers/aux_opencl.h">
+<area shape="rect" id="node2" href="$aux__opencl_8c.html" title="This file contains the code that implements the functions defined in the header file aux_opencl..." alt="" coords="5,80,155,107"/>
+<area shape="rect" id="node3" href="$main__parallel_8c.html" title="This is the main program of the OpenCL application. It executes a user&#45;specified accelerated version ..." alt="" coords="179,80,338,107"/>
+<area shape="rect" id="node4" href="$times__parallel_8c.html" title="This program collects execution performances of a user&#45;specified accelerated version of the triad cen..." alt="" coords="363,80,525,107"/>
+</map>
