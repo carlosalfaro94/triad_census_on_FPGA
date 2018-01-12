@@ -227,7 +227,6 @@ STATUS convert_graph(GRAPH* g, NODE_DEVICE** nodes, EDGE_DEVICE** edges, uint32_
         (*nodes)[i].node_id = get_node_id(n);
         (*nodes)[i].first_ind = offset;
         current_num_edges = get_num_neighbors(n);
-        printf("Node %u has %u neighbors\n", i, current_num_edges);
         if (current_num_edges > MAX_NEIGHBORS){
             printf("This software does not support graphs with such degrees.\n");
             return ERR;

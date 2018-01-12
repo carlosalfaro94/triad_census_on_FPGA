@@ -14,6 +14,7 @@
   *   @date: 28-11-2017
   **/
 
+
 __kernel void NDRange_BM_ord(__constant TASK* restrict tasks, __constant EDGE_DEVICE* restrict edge_list, __global CENSUS* census_array, uint num_nodes){
 	size_t i;
 	unsigned int k,l;
