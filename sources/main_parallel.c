@@ -260,7 +260,7 @@ int main(int argc, char **argv){
         }
         gettimeofday(&stop_1, NULL);
 		//stop_1=clock();
-        reduction_time = (stop.tv_sec - start.tv_sec) + ((double) (stop.tv_usec - start.tv_usec))/1000000;
+        reduction_time = (stop_1.tv_sec - start_1.tv_sec) + ((double) (stop_1.tv_usec - start_1.tv_usec))/1000000;
 		//reduction_time = ((double) (stop_1 -start_1)) / CLOCKS_PER_SEC;
 
         if (verbose || times)
