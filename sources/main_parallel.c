@@ -107,8 +107,10 @@ int main(int argc, char **argv){
                 ordered = TRUE;
                 if(optarg){
                     if (!strcmp(optarg, "deg")){
+                        printf("Ordering in ascending order of num neighbors\n");
                         ord_deg = TRUE;
                     } else if (!strcmp(optarg, "deg-r")){
+                        printf("Ordering in descending order of num neighbors\n");
                         ord_deg_rev = TRUE;
                     } else {
                         printf("Error in argument -o\n");
