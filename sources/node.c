@@ -105,6 +105,10 @@ int comp_nodes_by_degree(const void* key, const void* pnode){
 	return (int) *((uint32_t*) key) - (int) (*((NODE**) pnode))->num_neighbors;
 }
 
+int comp_nodes_by_degree_rev(const void* key, const void* pnode){
+	return (int) (*((NODE**) pnode))->num_neighbors - (int) *((uint32_t*) key);
+}
+
 int comp_ids(const void* key, const void* pid){
 	return (int) *((uint32_t*) key) - (int) *((uint32_t*) pid);
 }

@@ -152,6 +152,8 @@ int comp_nodes_by_id(const void* key, const void* pnode);
   **/
 int comp_nodes_by_degree(const void* key, const void* pnode);
 
+int comp_nodes_by_degree_rev(const void* key, const void* pnode);
+
 /**
   * @brief Function that compares two ids (useful for binary search and insertion sort).
   * 

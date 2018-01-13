@@ -42,7 +42,7 @@ int main(int argc, char **argv){
     //double reading_time, execution_time, reduction_time;
 
     char input_name[MAX_CHAR], input_binary[MAX_CHAR], name_kernel[MAX_CHAR], times_name[MAX_CHAR];
-    BOOL namefile, binary, function, times, times_file, result, verbose, ordered;
+    BOOL namefile, binary, function, times, times_file, result, verbose, ordered, ord_deg, ord_deg_rev;
     int long_index;
     char opt;
     int i, j;
@@ -54,13 +54,13 @@ int main(int argc, char **argv){
         {"times",optional_argument,0,'4'},
         {"result", no_argument,0,'5'},
         {"verbose", no_argument,0,'6'},
-        {"ordered", no_argument,0,'7'}, 
+        {"ordered", optional_argument,0,'7'}, 
         {"help", no_argument,0,'8'},
         {0,0,0,0}
     };
 
 
-    namefile = binary = function = times = times_file = result = verbose = ordered = FALSE;
+    namefile = binary = function = times = times_file = result = verbose = ordered = ord_deg = ord_deg_rev = FALSE;
     long_index = 0;
     while ((opt = getopt_long_only(argc, argv,"1:2:3:4:5678", options, &long_index)) != -1) {
         switch (opt) {
@@ -105,6 +105,17 @@ int main(int argc, char **argv){
             case '7':
                 set_ordered(TRUE);
                 ordered = TRUE;
+                if(optarg){
+                    if (!strcmp(optarg, "deg")){
+                        ord_deg = TRUE;
+                    } else if (!strcmp(optarg, "deg-r")){
+                        ord_deg_rev = TRUE;
+                    } else {
+                        printf("Error in argument -o\n");
+                        display_help(argv[0]);
+                        return EXIT_FAILURE;
+                    }
+                }
                 break;
             case '8':
                 display_help(argv[0]);
@@ -187,6 +198,13 @@ int main(int argc, char **argv){
 
     if (verbose){
     	display_graph_summary(g);
+    }
+
+
+    if (ord_deg){
+        qsort((void*)g->nodes, sizeof(NODE*), (size_t) get_num_nodes(g), &(comp_nodes_by_degree));
+    } else if (ord_deg_rev){
+        qsort((void*)g->nodes, sizeof(NODE*), (size_t) get_num_nodes(g), &(comp_nodes_by_degree_rev));
     }
 
     if (ERR == convert_graph(g, &nodes_host, &edges_host, &num_nodes, &num_edges)){
@@ -321,7 +339,7 @@ int main(int argc, char **argv){
 void display_help(char *program){
     printf("\nProgram to perform the triadic census of a graph.\n");
     printf("\nUse this program if you want to test correctness or performance of a triadic census algorithm on a given graph\n\n");
-    printf("Usage: %s -g <namefile> -b <aocx file> -f <kernel_name> [-t[=<timefile>]] [-r] [-v] [-o] [-h]\n", program);
+    printf("Usage: %s -g <namefile> -b <aocx file> -f <kernel_name> [-t[=<timefile>]] [-r] [-v] [-o[=deg|deg-r]] [-h]\n", program);
     printf("Where:\n");
     printf("\t-g, --graph <namefile>: file containing input graph\n");
     printf("\t-b, --binary <aocx file>: aocx file containing bitstream for kernel functions\n");
@@ -329,7 +347,7 @@ void display_help(char *program){
     printf("\t-t, --times [<timefile>]: Option to display times of execution\n");
     printf("\t-r, --result: Option to display results of triadic census\n");
     printf("\t-v, --verbose: Option to display info about execution process\n");
-    printf("\t-o, --ordered: Option to save nodes and adjacencies in order (default is not-ordered)\n");
+    printf("\t-o, --ordered[=deg|deg-r]: Option to save nodes and adjacencies in order (default is not-ordered)\n");
     printf("\t-h, --help: Option to display help\n");
 }
 
