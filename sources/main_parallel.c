@@ -205,9 +205,9 @@ int main(int argc, char **argv){
 
 
     if (ord_deg){
-        qsort((void*)g->nodes, sizeof(NODE*), (size_t) get_num_nodes(g), &(comp_nodes_by_degree));
+        qsort(g->nodes, get_num_nodes(g), sizeof(NODE*), &comp_nodes_by_degree);
     } else if (ord_deg_rev){
-        qsort((void*)g->nodes, sizeof(NODE*), (size_t) get_num_nodes(g), &(comp_nodes_by_degree_rev));
+        qsort(g->nodes, get_num_nodes(g), sizeof(NODE*), &comp_nodes_by_degree_rev);
     }
 
     if (ERR == convert_graph(g, &nodes_host, &edges_host, &num_nodes, &num_edges)){
