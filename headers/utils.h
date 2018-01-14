@@ -29,3 +29,9 @@ typedef enum {
 	BIDIRECTIONAL		/*!< Bidirectional edge */
 } DIRECTION;  /*! Edge direction enumeration */
 
+typedef enum {
+	NO_ORD = 0,   		/*!< No order */ 
+	ORD_BY_ID,     		/*!< Ordered by id (increasing order)*/
+	ORD_BY_DEG,			/*!< Ordered by degree (increasing order)*/
+	ORD_BY_DEG_REV  	/*!< Ordered by degree (decreasing order)*/
+} ORDER;   /*!Order type enumeration*/

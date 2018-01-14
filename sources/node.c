@@ -78,6 +78,10 @@ uint32_t get_node_id(NODE* n){
 	return n->node_id;
 }
 
+void set_node_id(NODE* n, uint32_t id){
+	n->node_id = id;
+}
+
 EDGE get_edge(NODE* n, int pos){
 	return n->adj_list[pos];
 }

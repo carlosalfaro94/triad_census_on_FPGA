@@ -81,6 +81,8 @@ int get_neighbor_pos(NODE* n, uint32_t neighbor_id);
   **/
 uint32_t get_node_id(NODE* n);
 
+void set_node_id(NODE* n, uint32_t id);
+
 /**
   * @brief Function that the edge present in a certain position\n
   * of the adjacency list of a node

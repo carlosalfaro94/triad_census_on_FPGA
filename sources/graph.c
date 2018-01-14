@@ -267,3 +267,38 @@ TASK* create_tasks_array(GRAPH*g, NODE_DEVICE* nodes, uint32_t* num_tasks){
 
     return tasks;
 }
+
+
+void reorder_and_retag(GRAPH* g, int (*function) (const void*, const void*)){
+    uint32_t* ids;
+    uint32_t i, j, num_nodes;
+    NODE* n;
+    EDGE e;
+
+    num_nodes = get_num_nodes(g);
+    ids = (uint32_t*) malloc(num_nodes*sizeof(uint32_t));
+    if (NULL == ids){
+        printf("Error allocating memory for ids\n");
+        return;
+    }
+
+    qsort(g->nodes, get_num_nodes(g), sizeof(NODE*), function);
+
+    for (i=0;i<get_num_nodes(g);i++){    /*save array of positions*/
+        ids[get_node_id(get_node_by_pos(g,i))] = i;
+    }
+
+    for(i=0;i<get_num_nodes(g);i++){
+        n = get_node_by_pos(g,i);
+        for (j=0;j<get_num_neighbors(n);j++){
+            e = get_edge(n,j);
+            set_neighbor_id(&e, ids[get_neighbor_id(e)]);
+        }
+        set_node_id(n,i);
+    }
+
+    free(ids);
+
+    return;
+}
+    

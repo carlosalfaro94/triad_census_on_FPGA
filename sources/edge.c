@@ -32,6 +32,12 @@ uint32_t get_neighbor_id(EDGE e){
 	return ((uint32_t) e) >> 2;
 }
 
+void set_neighbor_id(EDGE* e, uint32_t id){
+	DIRECTION dir;
+	dir = get_direction(*e);
+	*e = create_edge(id, dir);
+}
+
 DIRECTION get_direction(EDGE e){
 	if ((e & 0x03) == 0x01){
 		return IN_OUT;

@@ -46,6 +46,8 @@ EDGE create_edge(uint32_t edge_id, DIRECTION dir);
   **/
 uint32_t get_neighbor_id(EDGE e);
 
+void set_neighbor_id(EDGE* e, uint32_t id);
+
 
 /**
   * @brief Function that returns the direction of an edge

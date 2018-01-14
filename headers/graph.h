@@ -214,3 +214,6 @@ STATUS convert_graph(GRAPH* g, NODE_DEVICE** nodes, EDGE_DEVICE** edges, uint32_
   *
   **/
 TASK* create_tasks_array(GRAPH* g, NODE_DEVICE* nodes, uint32_t* num_tasks);
+
+
+void reorder_and_retag(GRAPH* g, int (*function) (const void*, const void*));
