@@ -12,10 +12,15 @@
   **/
 
 void display_graph_summary(GRAPH* g){
+  uint32_t num_nodes, num_edges;
+  num_nodes = get_num_nodes(g);
+  num_edges = get_num_edges(g);
 	printf("Graph summary\n");
-    printf("\t - Number of nodes: %" SCNu32 "\n", get_num_nodes(g));
-    printf("\t - Number of edges: %" SCNu32 "\n", get_num_edges(g));
-    printf("\t - Number of triads: %" SCNu64 "\n", num_total_triads(get_num_nodes(g)));
+  printf("\t - Number of nodes: %" SCNu32 "\n", num_nodes);
+  printf("\t - Number of edges: %" SCNu32 "\n", num_edges);
+  printf("\t - Maximum degree: %" SCNu32 "\n", get_max_degree(g));
+  printf("\t - Average degree: %f\n", ((float) (2*num_edges) / (float) num_nodes));
+  printf("\t - Number of triads: %" SCNu64 "\n", num_total_triads(num_nodes));
 }
 
 BOOL is_ordered_kernel(char* name_kernel){

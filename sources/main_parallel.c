@@ -107,10 +107,8 @@ int main(int argc, char **argv){
                 ordered = TRUE;
                 if(optarg){
                     if (!strcmp(optarg, "deg")){
-                        printf("Ordering in ascending order of num neighbors\n");
                         ord_deg = TRUE;
                     } else if (!strcmp(optarg, "deg-r")){
-                        printf("Ordering in descending order of num neighbors\n");
                         ord_deg_rev = TRUE;
                     } else {
                         printf("Error in argument -o\n");
@@ -198,20 +196,17 @@ int main(int argc, char **argv){
         return EXIT_SUCCESS;
     }
 
-    if (verbose){
+    if (verbose || times){
     	display_graph_summary(g);
     }
 
 
-    printf("Before:\n");
-    print_graph(g);
+
     if (ord_deg){
         reorder_and_retag(g, &comp_nodes_by_degree);
     } else if (ord_deg_rev){
         reorder_and_retag(g, &comp_nodes_by_degree_rev);
     }
-    printf("After:\n");
-    print_graph(g);
 
     if (ERR == convert_graph(g, &nodes_host, &edges_host, &num_nodes, &num_edges)){
         printf("Error corverting graph!!");
@@ -239,6 +234,8 @@ int main(int argc, char **argv){
     	nodes_device = create_and_write_buffer(context, queue, num_nodes*sizeof(NODE_DEVICE), nodes_host);
         num_works = num_nodes;
     }
+    if (verbose || times)
+        printf("Number of tasks launched is %d\n", num_works);
 
     edges_device = create_and_write_buffer(context, queue, num_edges*sizeof(EDGE_DEVICE), edges_host);
 

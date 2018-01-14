@@ -166,6 +166,19 @@ uint32_t get_num_edges(const GRAPH* g){
     return num_edges / 2;
 }
 
+uint32_t get_max_degree(const GRAPH* g){
+	uint32_t i;
+	uint32_t max_degree = 0;
+	uint32_t current_degree;
+	for (i=0;i<get_num_nodes(g);i++){
+		current_degree = get_degree(g->nodes[i]);
+		if (current_degree > max_degree){
+			max_degree = current_degree;
+		}
+	}
+	return max_degree;
+}
+
 
 NODE* get_node_by_pos(const GRAPH* g, int pos){
     return g->nodes[pos];

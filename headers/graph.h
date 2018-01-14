@@ -142,6 +142,8 @@ uint64_t get_num_triples(const GRAPH* g);
   **/
 uint32_t get_num_edges(const GRAPH* g);
 
+uint32_t get_max_degree(const GRAPH* g);
+
 /**
   * @brief Function that obtains the node of graph g present in 
   * position pos.
