@@ -223,7 +223,6 @@ int main(int argc, char **argv){
         return EXIT_FAILURE;
     }
 
-
     /*CREATE DEVICE BUFFERS*/
     if (is_NDRange_kernel(name_kernel) && is_BM_kernel(name_kernel)){
         tasks_host = create_tasks_array(g, nodes_host, &num_tasks);
@@ -233,7 +232,6 @@ int main(int argc, char **argv){
     	nodes_device = create_and_write_buffer(context, queue, num_nodes*sizeof(NODE_DEVICE), nodes_host);
         num_works = num_nodes;
     }
-
     edges_device = create_and_write_buffer(context, queue, num_edges*sizeof(EDGE_DEVICE), edges_host);
 
     if (is_NDRange_kernel(name_kernel)){
@@ -247,14 +245,12 @@ int main(int argc, char **argv){
     	census_device = create_and_write_buffer(context, queue, NUM_TRIADS*sizeof(cl_ulong), census_host);
     }
 
-
     /*SET KERNEL PARAMS*/
     if (is_NDRange_kernel(name_kernel) && is_BM_kernel(name_kernel)){
     	set_args(kernel, (void *) &tasks_device, (void *) &edges_device, (void *) &census_device, (void *) &num_nodes);
     } else {
     	set_args(kernel, (void *) &nodes_device, (void *) &edges_device, (void *) &census_device, (void *) &num_nodes);
     }
-
 
 
     if (verbose){
