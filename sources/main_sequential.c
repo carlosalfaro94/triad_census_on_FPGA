@@ -33,7 +33,7 @@ int main(int argc, char **argv){
 	double reading_time, execution_time;
 	FILE* fout;
 	char input_name[MAX_CHAR], function_name[MAX_FUNC], times_name[MAX_CHAR];
-	BOOL namefile, function, times, times_file, result, verbose;
+	BOOL namefile, function, times, times_file, result, verbose, ord_deg, ord_deg_rev;
 	int long_index;
 	char opt;
 
@@ -45,13 +45,13 @@ int main(int argc, char **argv){
         {"times",optional_argument,0,'3'},
         {"result", no_argument,0,'4'},
         {"verbose", no_argument,0,'5'},
-        {"ordered", no_argument,0,'6'},
+        {"ordered", optional_argument,0,'6'},
         {"help", no_argument,0,'7'},
         {0,0,0,0}
     };
 
 
-    namefile = function = times = times_file = result = verbose = FALSE;
+    namefile = function = times = times_file = result = verbose = ord_deg = ord_deg_rev = FALSE;
     long_index = 0;
     set_ordered(FALSE);
     while ((opt = getopt_long_only(argc, argv,"1:2:3:4567", options, &long_index)) != -1) {
@@ -92,6 +92,17 @@ int main(int argc, char **argv){
             	break;
             case '6':
             	set_ordered(TRUE);
+            	if(optarg){
+                    if (!strcmp(optarg, "deg")){
+                        ord_deg = TRUE;
+                    } else if (!strcmp(optarg, "deg-r")){
+                        ord_deg_rev = TRUE;
+                    } else {
+                        printf("Error in argument -o\n");
+                        display_help(argv[0]);
+                        return EXIT_FAILURE;
+                    }
+                }
             	break;
             case '7':
             	display_help(argv[0]);
@@ -130,10 +141,6 @@ int main(int argc, char **argv){
 		return EXIT_FAILURE;
 	}
 
-	//printf("The graph read is the following:\n");
-	//print_graph(g);
-	
-
 	if (get_num_nodes(g) <= 2){
 		printf("Graph too small to perform triadic census\n");
 		destroy_graph(g);
@@ -143,7 +150,11 @@ int main(int argc, char **argv){
 	if (verbose){
 		display_graph_summary(g);
 	}
-
+	if (ord_deg){
+        qsort(g->nodes, get_num_nodes(g), sizeof(NODE*), &comp_nodes_by_degree);
+    } else if (ord_deg_rev){
+        qsort(g->nodes, get_num_nodes(g), sizeof(NODE*), &comp_nodes_by_degree_rev);
+    }
 
 	//printf("Performing triadic census with the %s algorithm...\n", argv[2]);
 	
