@@ -284,11 +284,11 @@ void reorder_and_retag(GRAPH* g, int (*function) (const void*, const void*)){
 
     qsort(g->nodes, get_num_nodes(g), sizeof(NODE*), function);
 
-    for (i=0;i<get_num_nodes(g);i++){    /*save array of positions*/
+    for (i=0;i<num_nodes;i++){    /*save array of positions*/
         ids[get_node_id(get_node_by_pos(g,i))] = i;
     }
 
-    for(i=0;i<get_num_nodes(g);i++){
+    for(i=0;i<num_nodes;i++){
         n = get_node_by_pos(g,i);
         for (j=0;j<get_num_neighbors(n);j++){
             e = get_edge(n,j);
@@ -301,4 +301,3 @@ void reorder_and_retag(GRAPH* g, int (*function) (const void*, const void*)){
 
     return;
 }
-    

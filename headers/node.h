@@ -152,9 +152,9 @@ int comp_nodes_by_id(const void* key, const void* pnode);
   * the key is less than, greather than or equal to the pnode.
   *
   **/
-int comp_nodes_by_degree(const void* key, const void* pnode);
+int comp_nodes_by_degree(const void* pnode1, const void* pnode2);
 
-int comp_nodes_by_degree_rev(const void* key, const void* pnode);
+int comp_nodes_by_degree_rev(const void* pnode1, const void* pnode2);
 
 /**
   * @brief Function that compares two ids (useful for binary search and insertion sort).

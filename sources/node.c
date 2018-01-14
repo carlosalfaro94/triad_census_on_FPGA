@@ -105,12 +105,12 @@ int comp_nodes_by_id(const void* key, const void* pnode){
     return (int) *((uint32_t*) key) - (int) (*((NODE**) pnode))->node_id;
 }
 
-int comp_nodes_by_degree(const void* key, const void* pnode){
-	return (int) *((uint32_t*) key) - (int) (*((NODE**) pnode))->num_neighbors;
+int comp_nodes_by_degree(const void* pnode1, const void* pnode2){
+	return (int) (*((NODE**) pnode1))->num_neighbors - (int) (*((NODE**) pnode2))->num_neighbors;
 }
 
-int comp_nodes_by_degree_rev(const void* key, const void* pnode){
-	return (int) (*((NODE**) pnode))->num_neighbors - (int) *((uint32_t*) key);
+int comp_nodes_by_degree_rev(const void* pnode1, const void* pnode2){
+	return (int) (*((NODE**) pnode2))->num_neighbors - (int) (*((NODE**) pnode1))->num_neighbors;
 }
 
 int comp_ids(const void* key, const void* pid){
