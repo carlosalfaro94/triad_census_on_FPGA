@@ -64,6 +64,10 @@ int comp_edges(const void* key, const void* e2){
 	return *((uint32_t*) key) - get_neighbor_id(*((EDGE*) e2));
 }
 
+int comp_edges_by_id(const void* e1, const void* e2){
+	return get_neighbor_id(*((EDGE*) e1)) - get_neighbor_id(*((EDGE*) e2));
+}
+
 void insert_edge(void* adj_list, void* e, int pos){
 	((EDGE*) adj_list)[pos] = *((EDGE*) e);
 }

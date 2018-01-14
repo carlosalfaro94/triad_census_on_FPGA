@@ -85,6 +85,9 @@ STATUS set_direction (EDGE* e, DIRECTION dir);
   **/
 int comp_edges(const void* e1, const void* e2);
 
+
+int comp_edges_by_id(const void* e1, const void* e2);
+
 /**
   * @brief Function that inserts an edge in an adjacency lists
   * 

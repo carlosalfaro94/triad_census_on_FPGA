@@ -203,11 +203,15 @@ int main(int argc, char **argv){
     }
 
 
+    printf("Before:\n");
+    print_graph(g);
     if (ord_deg){
         reorder_and_retag(g, &comp_nodes_by_degree);
     } else if (ord_deg_rev){
         reorder_and_retag(g, &comp_nodes_by_degree_rev);
     }
+    printf("After:\n");
+    print_graph(g);
 
     if (ERR == convert_graph(g, &nodes_host, &edges_host, &num_nodes, &num_edges)){
         printf("Error corverting graph!!");
