@@ -95,6 +95,8 @@ void set_node_id(NODE* n, uint32_t id);
   **/
 EDGE get_edge(NODE* n, int pos);
 
+void set_edge(NODE* n, int pos, EDGE e);
+
 /**
   * @brief Function that returns the adjacency list of a certain node
   * 

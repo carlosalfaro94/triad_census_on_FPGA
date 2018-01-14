@@ -86,6 +86,10 @@ EDGE get_edge(NODE* n, int pos){
 	return n->adj_list[pos];
 }
 
+void set_edge(NODE* n, int pos, EDGE e){
+	n->adj_list[pos] = e;
+}
+
 
 EDGE* get_adj_list(NODE* n){
 	return n->adj_list;
