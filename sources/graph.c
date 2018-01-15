@@ -23,6 +23,7 @@ GRAPH* read_graph_from_file(char *filename){
     GRAPH* g;
     uint32_t u,v;
     int scanerr;
+    uint32_t num_nodes;
     if (NULL == (fp = fopen(filename, "r"))){
         printf("Error opening file %s\n", filename);
         return NULL;
@@ -35,13 +36,24 @@ GRAPH* read_graph_from_file(char *filename){
     }
 
     g->num_nodes = 0;
-    g->nodes = NULL;
+    scanerr = fscanf(fp, "%" SCNu32 "\n", &num_nodes);  /*Read number of nodes from file*/
+    if (1 != scanerr){
+        printf("Could not read number of nodes from the beginning of the file\n");
+        fclose(fp);
+        return NULL;
+    }
+
+    g->nodes = (NODE**) calloc (num_nodes, sizeof(NODE*));
+    if (NULL == g->nodes){
+        printf("Error while allocating node array\n");
+        free(g);
+        fclose(fp);
+        return NULL;
+    }
 
     scanerr = 1;
     while (EOF != scanerr){
-        //if (line[0] == '%'){
-        //    continue;
-        //}
+
         scanerr = fscanf(fp, "%" SCNu32 " %" SCNu32 "\n", &u, &v);
         if (2 != scanerr){
             scanerr = fscanf(fp, "%*s\n");
@@ -78,14 +90,11 @@ GRAPH* read_graph_from_file(char *filename){
     }
     fclose(fp);
     return g;
-
-
 }
 
 
 STATUS insert_node(GRAPH* g, uint32_t node_id){
     NODE *n;
-    //int i;
     if (NULL == g){
         printf("Error: Graph g is NULL\n");
         return ERR;
