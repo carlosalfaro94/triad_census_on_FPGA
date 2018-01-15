@@ -100,11 +100,12 @@ STATUS insert_node(GRAPH* g, uint32_t node_id){
         return ERR;
     }
     g->num_nodes++;
+    #if 0
     if (NULL == (g->nodes = (NODE**) realloc (g->nodes, g->num_nodes*sizeof(NODE*)))){
         printf("Error while allocating a new slot for the node\n");
         return ERR;
     }
-
+    #endif
     if (NULL == (n = create_node(node_id))){
         printf("Error creating new node with id %u\n", node_id);
         return ERR;
