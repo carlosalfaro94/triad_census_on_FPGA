@@ -1,1 +1,0 @@
-Compiler Command: aoc -v -march=emulator kernels/tc_single_BM_ord.cl -o emulations/single_BM_ord/tc_single_BM_ord.aocx -I headers/
